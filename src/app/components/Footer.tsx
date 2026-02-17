@@ -1,8 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import logo from '@/assets/b03470cfb0b27aeaddfbd274c77bc3123b3727da.png';
 
 export function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offset = 80;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <footer className="bg-primary border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -27,19 +51,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/how-it-works" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                <button onClick={() => scrollToSection('how-it-works')} className="text-muted-foreground hover:text-accent transition-colors text-sm">
                   How it Works
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/pricing" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                <button onClick={() => scrollToSection('pricing')} className="text-muted-foreground hover:text-accent transition-colors text-sm">
                   Pricing
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/faqs" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                <button onClick={() => scrollToSection('faqs')} className="text-muted-foreground hover:text-accent transition-colors text-sm">
                   FAQs
-                </Link>
+                </button>
               </li>
               <li>
                 <Link to="/for-vets" className="text-muted-foreground hover:text-accent transition-colors text-sm">

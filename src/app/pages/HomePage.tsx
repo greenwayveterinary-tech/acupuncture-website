@@ -336,7 +336,7 @@ export function HomePage() {
       </section>
 
       {/* Two Ways to Book */}
-      <section className="bg-primary py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section id="how-it-works" className="bg-primary py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
