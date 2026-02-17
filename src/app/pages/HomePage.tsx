@@ -803,11 +803,11 @@ export function HomePage() {
             Ready to help your pet feel better?
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg transition-colors inline-block font-medium shadow-lg">
               Book now
-            </Link>
+            </button>
             <Link
               to="/contact"
               className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg transition-all inline-block font-medium">
