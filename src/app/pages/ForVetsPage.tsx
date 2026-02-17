@@ -153,9 +153,9 @@ export function ForVetsPage() {
                 <Mail className="w-4 h-4" />
                 office@acupuncture-vet.co.uk
               </a>
-              <a href="tel:02012345678" className="inline-flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="tel:03333397274" className="inline-flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4" />
-                020 1234 5678
+                0333 339 7274
               </a>
             </div>
           </div>

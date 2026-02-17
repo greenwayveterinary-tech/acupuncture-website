@@ -183,7 +183,7 @@ export function PrivacyPage() {
               </p>
               <div className="text-muted-foreground space-y-2">
                 <p><strong>Email:</strong> office@acupuncture-vet.co.uk</p>
-                <p><strong>Phone:</strong> 020 1234 5678</p>
+                <p><strong>Phone:</strong> 0333 339 7274</p>
                 <p><strong>Address:</strong> London & Surrounding Areas</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">
