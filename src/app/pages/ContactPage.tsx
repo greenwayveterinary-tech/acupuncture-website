@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import contactImage from '@/assets/a571ae92f7cf8200356dd74a7b517b1de6c4fc52.png';
+import contactImage from '@/assets/a571ae92f7cf8200356dd74a7b517b1de6c4fc52.jpg';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({

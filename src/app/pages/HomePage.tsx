@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import { Check, Star, Home, MapPin, Calendar, Phone, ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import heroImage from '@/assets/a571ae92f7cf8200356dd74a7b517b1de6c4fc52.png';
-import acupunctureImage from '@/assets/3dada79126756c3434669a8dc76521f8f051ca78.png';
+import heroImage from '@/assets/a571ae92f7cf8200356dd74a7b517b1de6c4fc52.jpg';
+import acupunctureImage from '@/assets/3dada79126756c3434669a8dc76521f8f051ca78.jpg';
 import rcvsLogo from '@/assets/c6b0e8d6547a901cfb5d2c9fe772a37e507d2b69.png';
 import googleLogo from '@/assets/9de5472d821013eb1bbe6a36581587c9ba3ba3c8.png';
 import abvaLogo from '@/assets/503f0fcb693db01f094b4f8509dfb58a2480c451.png';
 import googleReviewsLogo from '@/assets/6d0166c9830200356e13c82a56adabd2629c5eb2.png';
-import ctaBackground from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.png';
+import ctaBackground from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.jpg';
 
 export function HomePage() {
   const [scrollY, setScrollY] = useState(0);

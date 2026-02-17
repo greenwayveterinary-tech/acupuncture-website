@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
-import acupunctureImage from '@/assets/3dada79126756c3434669a8dc76521f8f051ca78.png';
-import ctaBackground from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.png';
+import acupunctureImage from '@/assets/3dada79126756c3434669a8dc76521f8f051ca78.jpg';
+import ctaBackground from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.jpg';
 
 export function AcupuncturePage() {
   const conditions = [

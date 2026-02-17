@@ -7,6 +7,7 @@ import { ForVetsPage } from '@/app/pages/ForVetsPage';
 import { ContactPage } from '@/app/pages/ContactPage';
 import { PrivacyPage } from '@/app/pages/PrivacyPage';
 import { TermsPage } from '@/app/pages/TermsPage';
+import { NotFoundPage } from '@/app/pages/NotFoundPage';
 
 function Layout() {
   return (
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
       { path: '/contact', element: <ContactPage /> },
       { path: '/privacy', element: <PrivacyPage /> },
       { path: '/terms', element: <TermsPage /> },
+      { path: '*', element: <NotFoundPage /> },
     ],
   },
 ]);
