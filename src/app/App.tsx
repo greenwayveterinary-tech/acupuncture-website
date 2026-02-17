@@ -1,5 +1,4 @@
-import { useLayoutEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, ScrollRestoration, Outlet } from 'react-router-dom';
 import { Navigation } from '@/app/components/Navigation';
 import { Footer } from '@/app/components/Footer';
 import { HomePage } from '@/app/pages/HomePage';
@@ -9,32 +8,35 @@ import { ContactPage } from '@/app/pages/ContactPage';
 import { PrivacyPage } from '@/app/pages/PrivacyPage';
 import { TermsPage } from '@/app/pages/TermsPage';
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useLayoutEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-  }, [pathname]);
-  return null;
-}
-
-export default function App() {
+function Layout() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
+    <>
+      <ScrollRestoration />
       <div className="min-h-screen flex flex-col bg-primary">
         <Navigation />
         <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/acupuncture" element={<AcupuncturePage />} />
-            <Route path="/for-vets" element={<ForVetsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-          </Routes>
+          <Outlet />
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </>
   );
+}
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      { path: '/', element: <HomePage /> },
+      { path: '/acupuncture', element: <AcupuncturePage /> },
+      { path: '/for-vets', element: <ForVetsPage /> },
+      { path: '/contact', element: <ContactPage /> },
+      { path: '/privacy', element: <PrivacyPage /> },
+      { path: '/terms', element: <TermsPage /> },
+    ],
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
 }
