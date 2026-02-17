@@ -86,11 +86,11 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-foreground mb-1">Phone</h3>
-                      <a 
-                        href="tel:+447123456789" 
+                      <a
+                        href="tel:03333397274"
                         className="text-accent hover:underline"
                       >
-                        +44 7123 456 789
+                        0333 339 7274
                       </a>
                     </div>
                   </div>
@@ -101,10 +101,18 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-foreground mb-1">Clinic Locations</h3>
-                      <p className="text-muted-foreground">London, UK</p>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Specific location details provided upon booking
-                      </p>
+                      <div className="space-y-4 mt-2">
+                        <div>
+                          <p className="text-foreground font-medium">Flowmotion</p>
+                          <p className="text-muted-foreground text-sm">Unit 7, Bow Triangle Business Centre</p>
+                          <p className="text-muted-foreground text-sm">Eleanor Street, London, E3 4UR</p>
+                        </div>
+                        <div>
+                          <p className="text-foreground font-medium">Fido's of Fitzrovia</p>
+                          <p className="text-muted-foreground text-sm">87 Great Portland St</p>
+                          <p className="text-muted-foreground text-sm">London, W1W 7LU</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -126,23 +134,23 @@ export function ContactPage() {
               <div className="bg-card p-6 rounded-xl border border-border">
                 <h3 className="text-xl font-serif text-foreground mb-4">Quick Links</h3>
                 <div className="space-y-3">
-                  <Link 
-                    to="/pricing" 
+                  <Link
+                    to="/#pricing"
                     className="block text-accent hover:underline"
                   >
                     View Pricing →
                   </Link>
-                  <Link 
-                    to="/faqs" 
+                  <Link
+                    to="/#faqs"
                     className="block text-accent hover:underline"
                   >
                     Read FAQs →
                   </Link>
-                  <Link 
-                    to="/how-it-works" 
+                  <Link
+                    to="/acupuncture"
                     className="block text-accent hover:underline"
                   >
-                    How It Works →
+                    About Acupuncture →
                   </Link>
                 </div>
               </div>
