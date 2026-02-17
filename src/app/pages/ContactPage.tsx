@@ -15,6 +15,8 @@ export function ContactPage() {
   });
   
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -23,15 +25,21 @@ export function ContactPage() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock submission - in production this would send to a backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
+    setSubmitting(true);
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error('Failed to send');
+
+      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
@@ -41,7 +49,11 @@ export function ContactPage() {
         appointmentType: '',
         message: '',
       });
-    }, 3000);
+    } catch {
+      setError('Something went wrong. Please try emailing us directly at office@acupuncture-vet.co.uk');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -297,12 +309,19 @@ export function ContactPage() {
                     />
                   </div>
 
+                  {error && (
+                    <div className="bg-destructive/10 border border-destructive text-destructive p-4 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg transition-colors font-medium flex items-center justify-center gap-2"
+                    disabled={submitting}
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg transition-colors font-medium flex items-center justify-center gap-2 disabled:opacity-60"
                   >
                     <Send className="w-5 h-5" />
-                    Send Message
+                    {submitting ? 'Sending...' : 'Send Message'}
                   </button>
 
                   <p className="text-sm text-muted-foreground text-center">
