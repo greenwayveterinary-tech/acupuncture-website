@@ -80,12 +80,12 @@ export function Navigation() {
                 </Link>
               )
             ))}
-            <Link
-              to="/contact"
+            <button
+              onClick={() => scrollToSection('how-it-works')}
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-2.5 rounded-lg transition-colors"
             >
               Book / Enquire
-            </Link>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -121,13 +121,12 @@ export function Navigation() {
                 </Link>
               )
             ))}
-            <Link
-              to="/contact"
-              className="block bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-2.5 rounded-lg transition-colors text-center mt-4"
-              onClick={() => setIsOpen(false)}
+            <button
+              onClick={() => scrollToSection('how-it-works')}
+              className="block w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-2.5 rounded-lg transition-colors text-center mt-4"
             >
               Book / Enquire
-            </Link>
+            </button>
           </div>
         )}
       </div>
