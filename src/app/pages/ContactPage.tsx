@@ -115,7 +115,7 @@ export function ContactPage() {
                     <div>
                       <h3 className="text-lg font-medium text-foreground mb-1">Hours</h3>
                       <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-muted-foreground">Saturday: 9:00 AM - 2:00 PM</p>
+                      <p className="text-muted-foreground">Saturday: Closed</p>
                       <p className="text-muted-foreground">Sunday: Closed</p>
                     </div>
                   </div>
