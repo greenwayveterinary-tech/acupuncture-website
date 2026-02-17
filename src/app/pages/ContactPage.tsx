@@ -102,16 +102,16 @@ export function ContactPage() {
                     <div>
                       <h3 className="text-lg font-medium text-foreground mb-1">Clinic Locations</h3>
                       <div className="space-y-4 mt-2">
-                        <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">
                           <p className="text-foreground font-medium">Flowmotion</p>
                           <p className="text-muted-foreground text-sm">Unit 7, Bow Triangle Business Centre</p>
                           <p className="text-muted-foreground text-sm">Eleanor Street, London, E3 4UR</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">
                           <p className="text-foreground font-medium">Fido's of Fitzrovia</p>
                           <p className="text-muted-foreground text-sm">87 Great Portland St</p>
                           <p className="text-muted-foreground text-sm">London, W1W 7LU</p>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>
