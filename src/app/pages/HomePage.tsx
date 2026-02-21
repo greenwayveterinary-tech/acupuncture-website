@@ -546,13 +546,15 @@ export function HomePage() {
                 </motion.div>
               </div>
 
-              <Link
-                to="/contact"
+              <a
+                href="https://app.conciergevet.co.uk/book/gva-0f4570"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-4 rounded-xl transition-all shadow-md hover:shadow-xl font-medium"
               >
                 <Calendar className="w-5 h-5" />
                 Book your clinic appointment now
-              </Link>
+              </a>
             </motion.div>
           </div>
         </div>
