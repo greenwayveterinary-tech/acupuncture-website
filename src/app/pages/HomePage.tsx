@@ -703,12 +703,14 @@ export function HomePage() {
               </div>
 
               {/* CTA */}
-              <Link
-                to="/contact"
+              <a
+                href="https://app.conciergevet.co.uk/book/gva-0f4570"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full text-center bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg transition-all font-medium shadow-md"
               >
                 Book Now
-              </Link>
+              </a>
             </div>
           </div>
         </div>
