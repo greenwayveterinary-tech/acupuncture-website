@@ -1,6 +1,13 @@
+import { SEO } from '@/app/components/SEO';
+
 export function PrivacyPage() {
   return (
     <div className="min-h-screen bg-primary">
+      <SEO
+        title="Privacy Policy"
+        description="Privacy policy for Greenway Veterinary Acupuncture. How we collect, use, and protect your personal data."
+        path="/privacy"
+      />
       {/* Header */}
       <section className="bg-gradient-to-b from-primary to-primary/95 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

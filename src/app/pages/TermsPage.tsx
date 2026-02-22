@@ -1,6 +1,13 @@
+import { SEO } from '@/app/components/SEO';
+
 export function TermsPage() {
   return (
     <div className="min-h-screen bg-primary">
+      <SEO
+        title="Terms of Service"
+        description="Terms of service for Greenway Veterinary Acupuncture. Booking, cancellation, and treatment policies."
+        path="/terms"
+      />
       {/* Header */}
       <section className="bg-gradient-to-b from-primary to-primary/95 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

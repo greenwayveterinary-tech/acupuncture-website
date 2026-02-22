@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SEO } from '@/app/components/SEO';
 import acupunctureImage from '@/assets/3dada79126756c3434669a8dc76521f8f051ca78.jpg';
 import ctaBackground from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.jpg';
 
@@ -34,6 +35,11 @@ export function AcupuncturePage() {
 
   return (
     <div className="flex flex-col">
+      <SEO
+        title="Veterinary Acupuncture for Dogs & Cats"
+        description="Learn how veterinary acupuncture works, what conditions it treats, and what to expect during a session. Arthritis, pain relief, mobility support, and post-operative recovery."
+        path="/acupuncture"
+      />
       {/* Hero */}
       <section className="bg-primary py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -173,7 +179,7 @@ export function AcupuncturePage() {
       {/* CTA */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={ctaBackground} alt="" className="w-full h-full object-cover" />
+          <img src={ctaBackground} alt="" role="presentation" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">

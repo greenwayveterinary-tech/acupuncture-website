@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { SEO } from '@/app/components/SEO';
 import contactImage from '@/assets/a571ae92f7cf8200356dd74a7b517b1de6c4fc52.jpg';
 
 export function ContactPage() {
@@ -58,6 +59,11 @@ export function ContactPage() {
 
   return (
     <div className="min-h-screen bg-secondary">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Greenway Veterinary Acupuncture. Book a home visit or clinic appointment for your pet in London. Call 0333 339 7274 or email us."
+        path="/contact"
+      />
       {/* Header Section */}
       <section className="bg-primary py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

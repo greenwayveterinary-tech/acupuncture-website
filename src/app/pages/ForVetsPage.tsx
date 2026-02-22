@@ -1,12 +1,18 @@
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight, FileText, Phone, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SEO } from '@/app/components/SEO';
 import rcvsLogo from '@/assets/c6b0e8d6547a901cfb5d2c9fe772a37e507d2b69.png';
 import abvaLogo from '@/assets/503f0fcb693db01f094b4f8509dfb58a2480c451.png';
 
 export function ForVetsPage() {
   return (
     <div className="flex flex-col">
+      <SEO
+        title="For Veterinary Professionals"
+        description="Refer patients to Greenway Veterinary Acupuncture. We work collaboratively with vets, providing treatment reports and maintaining your involvement in patient care."
+        path="/for-vets"
+      />
       {/* Hero */}
       <section className="bg-primary py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

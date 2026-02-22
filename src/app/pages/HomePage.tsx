@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Check, Star, Home, MapPin, Calendar, Phone, ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { SEO } from '@/app/components/SEO';
 import heroImage from '@/assets/a571ae92f7cf8200356dd74a7b517b1de6c4fc52.jpg';
 import acupunctureImage from '@/assets/3dada79126756c3434669a8dc76521f8f051ca78.jpg';
 import rcvsLogo from '@/assets/c6b0e8d6547a901cfb5d2c9fe772a37e507d2b69.png';
@@ -86,8 +87,68 @@ export function HomePage() {
     }
   ];
 
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VeterinaryCare',
+    name: 'Greenway Veterinary Acupuncture',
+    description: 'Veterinary acupuncture for dogs and cats in London. Natural pain relief, mobility support, and post-operative recovery.',
+    url: 'https://acupuncture-vet.co.uk',
+    telephone: '03333397274',
+    email: 'office@acupuncture-vet.co.uk',
+    priceRange: '££',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+    location: [
+      {
+        '@type': 'Place',
+        name: 'Flowmotion',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Unit 7, Bow Triangle Business Centre, Eleanor Street',
+          addressLocality: 'London',
+          postalCode: 'E3 4UR',
+          addressCountry: 'GB',
+        },
+      },
+      {
+        '@type': 'Place',
+        name: "Fido's of Fitzrovia",
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '87 Great Portland St',
+          addressLocality: 'London',
+          postalCode: 'W1W 7LU',
+          addressCountry: 'GB',
+        },
+      },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="flex flex-col">
+      <SEO
+        title="Greenway Veterinary Acupuncture | Natural Pain Relief for Pets in London"
+        description="Veterinary acupuncture for dogs and cats in London. Natural pain relief, mobility support, and post-operative recovery. RCVS registered, ABVA members. Book a home visit or clinic appointment."
+        path="/"
+        jsonLd={[localBusinessSchema, faqSchema]}
+      />
       {/* Hero Section */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden -mt-32 pt-36">
         {/* Background Image */}
