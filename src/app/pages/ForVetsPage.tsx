@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight, FileText, Phone, Mail } from 'lucide-react';
+import { motion } from 'motion/react';
 import rcvsLogo from '@/assets/c6b0e8d6547a901cfb5d2c9fe772a37e507d2b69.png';
 import abvaLogo from '@/assets/503f0fcb693db01f094b4f8509dfb58a2480c451.png';
 
@@ -35,49 +36,52 @@ export function ForVetsPage() {
         </div>
       </section>
 
-      {/* What to Expect */}
+      {/* The Referral Process */}
       <section className="bg-secondary py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-serif text-foreground text-center mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-serif text-foreground text-center mb-12"
+          >
             The Referral Process
-          </h2>
-          <div className="space-y-6">
-            <div className="bg-card p-6 rounded-xl border border-border flex gap-6">
-              <div className="bg-accent text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">1</div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-1">Client Enquiry</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  The client contacts us directly, or you refer them to us. We can also discuss potential cases with you beforehand to assess suitability.
-                </p>
-              </div>
-            </div>
-            <div className="bg-card p-6 rounded-xl border border-border flex gap-6">
-              <div className="bg-accent text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">2</div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-1">Referral & Clinical Notes</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We request a referral and full clinical history from your practice. This includes diagnostics, current medications, and any relevant imaging or blood results.
-                </p>
-              </div>
-            </div>
-            <div className="bg-card p-6 rounded-xl border border-border flex gap-6">
-              <div className="bg-accent text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">3</div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-1">Assessment & Treatment</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We carry out a thorough examination and acupuncture session, developing a treatment plan tailored to the patient's condition and needs.
-                </p>
-              </div>
-            </div>
-            <div className="bg-card p-6 rounded-xl border border-border flex gap-6">
-              <div className="bg-accent text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">4</div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-1">Reporting Back</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  After each session, we send a detailed treatment report to you. We're always happy to discuss progress, adjustments, or concerns by phone or email.
-                </p>
-              </div>
-            </div>
+          </motion.h2>
+          <div className="space-y-6 relative">
+            {/* Animated connecting line */}
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: "calc(100% - 40px)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: 0.2 }}
+              className="absolute left-[43px] top-[28px] w-0.5 bg-accent/30 hidden md:block"
+            />
+
+            {[
+              { title: 'Client Enquiry', desc: 'The client contacts us directly, or you refer them to us. We can also discuss potential cases with you beforehand to assess suitability.' },
+              { title: 'Referral & Clinical Notes', desc: 'We request a referral and full clinical history from your practice. This includes diagnostics, current medications, and any relevant imaging or blood results.' },
+              { title: 'Assessment & Treatment', desc: 'We carry out a thorough examination and acupuncture session, developing a treatment plan tailored to the patient\'s condition and needs.' },
+              { title: 'Reporting Back', desc: 'After each session, we send a detailed treatment report to you. We\'re always happy to discuss progress, adjustments, or concerns by phone or email.' },
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                className="bg-card p-6 rounded-xl border border-border flex gap-6 relative z-10 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md">
+                  {i + 1}
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-1">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

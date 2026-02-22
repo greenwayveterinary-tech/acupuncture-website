@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
 import acupunctureImage from '@/assets/3dada79126756c3434669a8dc76521f8f051ca78.jpg';
 import ctaBackground from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.jpg';
 
@@ -121,37 +122,50 @@ export function AcupuncturePage() {
       {/* What to Expect */}
       <section className="bg-card py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-serif text-foreground text-center mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-serif text-foreground text-center mb-12"
+          >
             What to Expect
-          </h2>
-          <div className="space-y-8">
-            <div className="flex gap-6">
-              <div className="bg-accent text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">1</div>
-              <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">Initial Consultation</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Allow a good hour for the first session. We'll examine your pet, watch them move, discuss their history and lifestyle, and review their clinical records (which we obtain from your regular vet). We then begin the first acupuncture treatment.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="bg-accent text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">2</div>
-              <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">The Treatment</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Fine needles are gently placed at specific acupoints. We start with fewer points on the first session and build up in subsequent treatments. The needles remain in place for approximately 15–20 minutes. 95% of the time your pet won't feel anything at all.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="bg-accent text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">3</div>
-              <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">Aftercare & Follow-Up</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  After the session, allow your pet an hour or so of relaxation. We'll discuss what we found, our treatment plan going forward, and any complementary advice. Most pets show improvement within 1–3 sessions.
-                </p>
-              </div>
-            </div>
+          </motion.h2>
+          <div className="space-y-8 relative">
+            {/* Animated connecting line */}
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: "calc(100% - 40px)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: 0.2 }}
+              className="absolute left-[19px] top-[20px] w-0.5 bg-accent/30"
+            />
+
+            {[
+              { title: 'Initial Consultation', desc: 'Allow a good hour for the first session. We\'ll examine your pet, watch them move, discuss their history and lifestyle, and review their clinical records (which we obtain from your regular vet). We then begin the first acupuncture treatment.' },
+              { title: 'The Treatment', desc: 'Fine needles are gently placed at specific acupoints. We start with fewer points on the first session and build up in subsequent treatments. The needles remain in place for approximately 15–20 minutes. 95% of the time your pet won\'t feel anything at all.' },
+              { title: 'Aftercare & Follow-Up', desc: 'After the session, allow your pet an hour or so of relaxation. We\'ll discuss what we found, our treatment plan going forward, and any complementary advice. Most pets show improvement within 1–3 sessions.' },
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
+                className="flex gap-6 relative z-10"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
+                  className="bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md"
+                >
+                  {i + 1}
+                </motion.div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
