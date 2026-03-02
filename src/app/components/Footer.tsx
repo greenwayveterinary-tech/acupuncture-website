@@ -51,6 +51,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/blog" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <button onClick={() => scrollToSection('how-it-works')} className="text-muted-foreground hover:text-accent transition-colors text-sm">
                   How it Works
                 </button>
