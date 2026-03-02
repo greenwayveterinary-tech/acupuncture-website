@@ -1,0 +1,44 @@
+import { Helmet } from 'react-helmet-async';
+
+const SITE_URL = 'https://acupuncture-vet.co.uk';
+const SITE_NAME = 'Greenway Veterinary Acupuncture';
+
+interface SEOProps {
+  title: string;
+  description: string;
+  path: string;
+  ogType?: string;
+  ogImage?: string;
+  publishedAt?: string;
+  updatedAt?: string;
+  jsonLd?: object | object[];
+}
+
+export function SEO({ title, description, path, ogType, ogImage, publishedAt, updatedAt, jsonLd }: SEOProps) {
+  const url = `${SITE_URL}${path}`;
+  const fullTitle = path === '/' ? title : `${title} | ${SITE_NAME}`;
+
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={ogType || 'website'} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      {publishedAt && <meta property="article:published_time" content={publishedAt} />}
+      {updatedAt && <meta property="article:modified_time" content={updatedAt} />}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(Array.isArray(jsonLd) ? jsonLd : jsonLd)}
+        </script>
+      )}
+    </Helmet>
+  );
+}

@@ -1,0 +1,344 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { SEO } from '@/app/components/SEO';
+import contactImage from '@/assets/a571ae92f7cf8200356dd74a7b517b1de6c4fc52.jpg';
+
+export function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    petName: '',
+    petType: '',
+    appointmentType: '',
+    message: '',
+  });
+  
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error('Failed to send');
+
+      setSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        petName: '',
+        petType: '',
+        appointmentType: '',
+        message: '',
+      });
+    } catch {
+      setError('Something went wrong. Please try emailing us directly at office@acupuncture-vet.co.uk');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-secondary">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Greenway Veterinary Acupuncture. Book a home visit or clinic appointment for your pet in London. Call 0333 339 7274 or email us."
+        path="/contact"
+      />
+      {/* Header Section */}
+      <section className="bg-primary py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl font-serif text-primary-foreground mb-4">Get In Touch</h1>
+          <p className="text-xl text-primary-foreground/80">
+            Ready to help your pet feel better? Contact us today.
+          </p>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-serif text-foreground mb-6">Contact Information</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-accent/10 p-3 rounded-lg">
+                      <Mail className="text-accent w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium text-foreground mb-1">Email</h3>
+                      <a 
+                        href="mailto:office@acupuncture-vet.co.uk" 
+                        className="text-accent hover:underline"
+                      >
+                        office@acupuncture-vet.co.uk
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-accent/10 p-3 rounded-lg">
+                      <Phone className="text-accent w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium text-foreground mb-1">Phone</h3>
+                      <a
+                        href="tel:03333397274"
+                        className="text-accent hover:underline"
+                      >
+                        0333 339 7274
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-accent/10 p-3 rounded-lg">
+                      <MapPin className="text-accent w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium text-foreground mb-1">Clinic Locations</h3>
+                      <div className="space-y-4 mt-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">
+                          <p className="text-foreground font-medium">Flowmotion</p>
+                          <p className="text-muted-foreground text-sm">Unit 7, Bow Triangle Business Centre</p>
+                          <p className="text-muted-foreground text-sm">Eleanor Street, London, E3 4UR</p>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">
+                          <p className="text-foreground font-medium">Fido's of Fitzrovia</p>
+                          <p className="text-muted-foreground text-sm">87 Great Portland St</p>
+                          <p className="text-muted-foreground text-sm">London, W1W 7LU</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-accent/10 p-3 rounded-lg">
+                      <Clock className="text-accent w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium text-foreground mb-1">Hours</h3>
+                      <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                      <p className="text-muted-foreground">Saturday: Closed</p>
+                      <p className="text-muted-foreground">Sunday: Closed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div className="bg-card p-6 rounded-xl border border-border">
+                <h3 className="text-xl font-serif text-foreground mb-4">Quick Links</h3>
+                <div className="space-y-3">
+                  <Link
+                    to="/#pricing"
+                    className="block text-accent hover:underline"
+                  >
+                    View Pricing →
+                  </Link>
+                  <Link
+                    to="/#faqs"
+                    className="block text-accent hover:underline"
+                  >
+                    Read FAQs →
+                  </Link>
+                  <Link
+                    to="/acupuncture"
+                    className="block text-accent hover:underline"
+                  >
+                    About Acupuncture →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Pet Image */}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={contactImage} 
+                  alt="Happy dog and cat together" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-card p-8 rounded-xl border border-border">
+              <h2 className="text-3xl font-serif text-foreground mb-6">Send Us a Message</h2>
+              
+              {submitted ? (
+                <div className="bg-accent/10 border border-accent text-foreground p-6 rounded-lg text-center">
+                  <Send className="w-12 h-12 text-accent mx-auto mb-4" />
+                  <h3 className="text-xl font-medium mb-2">Thank you!</h3>
+                  <p className="text-muted-foreground">
+                    We've received your message and will get back to you shortly.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        Your Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                        placeholder="John Smith"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                        placeholder="john@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                      placeholder="+44 7123 456 789"
+                    />
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="petName" className="block text-sm font-medium text-foreground mb-2">
+                        Pet's Name
+                      </label>
+                      <input
+                        type="text"
+                        id="petName"
+                        name="petName"
+                        value={formData.petName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                        placeholder="Max"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="petType" className="block text-sm font-medium text-foreground mb-2">
+                        Pet Type
+                      </label>
+                      <select
+                        id="petType"
+                        name="petType"
+                        value={formData.petType}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                      >
+                        <option value="">Select...</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="appointmentType" className="block text-sm font-medium text-foreground mb-2">
+                      Appointment Preference
+                    </label>
+                    <select
+                      id="appointmentType"
+                      name="appointmentType"
+                      value={formData.appointmentType}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                    >
+                      <option value="">Select...</option>
+                      <option value="home">Home Visit</option>
+                      <option value="clinic">Clinic Visit</option>
+                      <option value="unsure">Not Sure Yet</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={5}
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+                      placeholder="Tell us about your pet and what you'd like help with..."
+                    />
+                  </div>
+
+                  {error && (
+                    <div className="bg-destructive/10 border border-destructive text-destructive p-4 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg transition-colors font-medium flex items-center justify-center gap-2 disabled:opacity-60"
+                  >
+                    <Send className="w-5 h-5" />
+                    {submitting ? 'Sending...' : 'Send Message'}
+                  </button>
+
+                  <p className="text-sm text-muted-foreground text-center">
+                    * Required fields
+                  </p>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
