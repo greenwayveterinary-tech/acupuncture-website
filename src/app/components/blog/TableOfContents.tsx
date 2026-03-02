@@ -34,12 +34,12 @@ export function TableOfContents({ entries }: TableOfContentsProps) {
   if (entries.length === 0) return null;
 
   return (
-    <nav aria-label="Table of contents" className="space-y-3">
-      <h4 className="text-sm font-semibold text-primary uppercase tracking-wider flex items-center gap-2">
+    <nav aria-label="Table of contents" className="bg-white rounded-xl border border-gray-100 p-5">
+      <h4 className="text-sm font-semibold text-primary uppercase tracking-wider flex items-center gap-2 mb-3">
         <List className="w-4 h-4" />
         Contents
       </h4>
-      <ul className="space-y-1">
+      <ul className="space-y-0.5">
         {entries.map((entry) => (
           <li key={entry.id}>
             <a
@@ -53,12 +53,12 @@ export function TableOfContents({ entries }: TableOfContentsProps) {
                   window.scrollTo({ top, behavior: 'smooth' });
                 }
               }}
-              className={`block text-sm py-1 transition-colors ${
-                entry.level === 3 ? 'pl-4' : ''
+              className={`block text-sm py-1.5 border-l-2 pl-3 transition-colors ${
+                entry.level === 3 ? 'ml-3' : ''
               } ${
                 activeId === entry.id
-                  ? 'text-accent font-medium'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'border-l-accent text-accent font-medium'
+                  : 'border-l-transparent text-muted-foreground hover:text-foreground hover:border-l-gray-300'
               }`}
             >
               {entry.text}

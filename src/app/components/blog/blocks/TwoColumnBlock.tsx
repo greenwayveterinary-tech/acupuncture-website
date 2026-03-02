@@ -18,11 +18,11 @@ function renderSimpleBlock(block: ContentBlock, index: number) {
 
 export function TwoColumnBlock({ left, right }: TwoColumnBlockType) {
   return (
-    <div className="grid md:grid-cols-2 gap-6 my-8 p-5 bg-secondary/50 rounded-xl">
-      <div className="space-y-3">
+    <div className="grid md:grid-cols-2 gap-4 my-8">
+      <div className="bg-white border border-gray-100 rounded-xl p-5 space-y-3">
         {left.map((block, i) => renderSimpleBlock(block, i))}
       </div>
-      <div className="space-y-3">
+      <div className="bg-white border border-gray-100 rounded-xl p-5 space-y-3">
         {right.map((block, i) => renderSimpleBlock(block, i))}
       </div>
     </div>

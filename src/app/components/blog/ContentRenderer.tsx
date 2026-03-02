@@ -44,7 +44,7 @@ function renderBlock(block: ContentBlock, index: number) {
 
 export function ContentRenderer({ content }: ContentRendererProps) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       {content.map((block, index) => (
         <motion.div
           key={index}

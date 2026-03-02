@@ -7,7 +7,7 @@ interface BlogBreadcrumbsProps {
 
 export function BlogBreadcrumbs({ postTitle }: BlogBreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground">
+    <nav aria-label="Breadcrumb" className="text-sm text-white/60">
       <ol className="flex items-center flex-wrap gap-1">
         <li>
           <Link to="/" className="hover:text-accent transition-colors">
@@ -27,12 +27,12 @@ export function BlogBreadcrumbs({ postTitle }: BlogBreadcrumbsProps) {
             <li>
               <ChevronRight className="w-3.5 h-3.5 mx-1 inline" />
             </li>
-            <li className="text-foreground/70 truncate max-w-[200px] sm:max-w-none">
+            <li className="text-white/80 truncate max-w-[200px] sm:max-w-none">
               {postTitle}
             </li>
           </>
         ) : (
-          <li className="text-foreground/70">Blog</li>
+          <li className="text-white/80">Blog</li>
         )}
       </ol>
     </nav>

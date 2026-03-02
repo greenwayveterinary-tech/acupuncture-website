@@ -24,11 +24,11 @@ const variants = {
     titleColor: 'text-amber-900',
   },
   science: {
-    border: 'border-l-[#0a2e2e]',
-    bg: 'bg-[#0a2e2e]/5',
+    border: 'border-l-violet-500',
+    bg: 'bg-violet-50',
     icon: FlaskConical,
-    iconColor: 'text-[#0a2e2e]',
-    titleColor: 'text-[#0a2e2e]',
+    iconColor: 'text-violet-500',
+    titleColor: 'text-violet-900',
   },
 };
 

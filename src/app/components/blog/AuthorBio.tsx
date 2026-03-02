@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Stethoscope } from 'lucide-react';
 import type { Author } from '@/app/types/blog';
 
 interface AuthorBioProps {
@@ -12,15 +13,12 @@ export function AuthorBio({ author }: AuthorBioProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="bg-secondary/50 rounded-xl p-6 flex items-start gap-5"
+      className="flex items-center gap-4 py-6 border-t border-gray-200"
     >
-      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white text-xl font-serif shrink-0">
-        {author.name.split(' ').slice(1, 3).map(n => n[0]).join('')}
-      </div>
+      <Stethoscope className="w-8 h-8 text-primary/40 shrink-0" />
       <div>
-        <p className="font-serif text-lg text-primary font-medium">{author.name}</p>
-        <p className="text-sm text-accent font-medium mb-2">{author.qualifications}</p>
-        <p className="text-foreground/70 text-sm leading-relaxed">{author.bio}</p>
+        <p className="font-serif text-base text-primary font-medium">{author.name}</p>
+        <p className="text-sm text-muted-foreground">{author.qualifications}</p>
       </div>
     </motion.div>
   );

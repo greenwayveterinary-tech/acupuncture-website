@@ -85,7 +85,7 @@ export function BlogPostPage() {
 
       {/* Hero */}
       <section className="bg-primary py-12 md:py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <BlogBreadcrumbs postTitle={post.title} />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -100,11 +100,11 @@ export function BlogPostPage() {
               {post.title}
             </h1>
             {post.subtitle && (
-              <p className="text-lg text-white/70 mb-6">{post.subtitle}</p>
+              <p className="text-lg text-white/80 mb-6">{post.subtitle}</p>
             )}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-white/60">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-white/70">
               {author && (
-                <span className="font-medium text-white/80">
+                <span className="font-medium text-white/90">
                   {author.name}, {author.qualifications}
                 </span>
               )}
@@ -122,11 +122,11 @@ export function BlogPostPage() {
       </section>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-        <div className="flex gap-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <div className="flex gap-6">
           {/* Table of Contents - desktop sidebar */}
           {tocEntries.length > 0 && (
-            <aside className="hidden xl:block w-56 shrink-0">
+            <aside className="hidden xl:block w-52 shrink-0">
               <div className="sticky top-28">
                 <TableOfContents entries={tocEntries} />
               </div>
@@ -134,33 +134,33 @@ export function BlogPostPage() {
           )}
 
           {/* Main content */}
-          <article className="flex-1 max-w-3xl mx-auto">
+          <article className="flex-1 min-w-0 max-w-3xl">
             {/* Mobile ToC */}
             {tocEntries.length > 0 && (
-              <div className="xl:hidden mb-8 bg-white rounded-xl p-5 border border-gray-100">
+              <div className="xl:hidden mb-8">
                 <TableOfContents entries={tocEntries} />
               </div>
             )}
 
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 py-8 sm:px-8 md:px-12 md:py-10">
               <ContentRenderer content={post.content} />
             </div>
 
             {/* Author Bio */}
             {author && (
-              <div className="mt-10">
+              <div className="mt-6 px-2">
                 <AuthorBio author={author} />
               </div>
             )}
 
             {/* CTA */}
-            <div className="mt-10">
+            <div className="px-2">
               <BlogCTA />
             </div>
 
             {/* Related Posts */}
             {relatedPosts.length > 0 && (
-              <div className="mt-14">
+              <div className="mt-10">
                 <RelatedPosts posts={relatedPosts} />
               </div>
             )}

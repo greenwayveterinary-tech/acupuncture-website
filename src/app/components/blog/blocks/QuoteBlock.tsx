@@ -4,7 +4,7 @@ export function QuoteBlock({ variant, text, attribution }: QuoteBlockType) {
   if (variant === 'pullquote') {
     return (
       <figure className="my-10 px-6 md:px-10">
-        <blockquote className="text-xl md:text-2xl font-serif text-accent/90 italic leading-relaxed text-center">
+        <blockquote className="text-xl md:text-2xl font-serif text-primary/70 italic leading-relaxed text-center">
           "{text}"
         </blockquote>
         {attribution && (
