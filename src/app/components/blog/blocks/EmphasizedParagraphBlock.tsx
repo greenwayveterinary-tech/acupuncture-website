@@ -2,8 +2,9 @@ import type { EmphasizedParagraphBlock as EmphasizedParagraphBlockType } from '@
 
 export function EmphasizedParagraphBlock({ text }: EmphasizedParagraphBlockType) {
   return (
-    <p className="text-lg md:text-xl text-foreground/85 leading-relaxed font-serif">
-      {text}
-    </p>
+    <p
+      className="text-lg md:text-xl text-foreground/85 leading-relaxed font-serif"
+      dangerouslySetInnerHTML={{ __html: text }}
+    />
   );
 }

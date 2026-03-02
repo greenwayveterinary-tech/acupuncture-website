@@ -44,7 +44,7 @@ export function CalloutBlock({ variant, title, text }: CalloutBlockType) {
           {title && (
             <p className={`${style.titleColor} font-semibold mb-1.5`}>{title}</p>
           )}
-          <p className="text-foreground/80 leading-relaxed text-[15px]">{text}</p>
+          <p className="text-foreground/80 leading-relaxed text-[15px]" dangerouslySetInnerHTML={{ __html: text }} />
         </div>
       </div>
     </div>

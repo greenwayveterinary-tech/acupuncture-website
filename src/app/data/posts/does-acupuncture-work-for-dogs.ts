@@ -2,227 +2,311 @@ import type { BlogPost } from '@/app/types/blog';
 
 export const doesAcupunctureWorkForDogs: BlogPost = {
   slug: 'does-acupuncture-work-for-dogs',
-  title: 'Does Acupuncture Really Work for Dogs?',
-  subtitle: 'A vet with 25 years of clinical experience separates the evidence from the hype',
+  title: 'Does Acupuncture Really Work for Dogs? A Vet\'s Honest Answer',
+  subtitle: 'A veterinary acupuncturist with 25 years of clinical experience explains the science, evidence and realistic expectations',
   description:
-    'Veterinary acupuncture for dogs explained by a vet with 25 years of experience. Learn the science, evidence, and what to realistically expect from treatment.',
+    'A veterinary acupuncturist with 25 years of clinical experience explains the science, evidence and realistic expectations for dog acupuncture.',
   category: 'Evidence & Science',
   authorSlug: 'alastair-greenway',
   publishedAt: '2026-03-01',
-  readingTime: 8,
-  tags: ['acupuncture for dogs', 'veterinary acupuncture evidence', 'dog acupuncture UK', 'pain relief dogs'],
-  relatedSlugs: ['what-to-expect-first-session', 'acupuncture-arthritis-dogs'],
+  readingTime: 9,
+  tags: [
+    'acupuncture for dogs',
+    'does dog acupuncture work',
+    'veterinary acupuncture evidence',
+    'dog acupuncture UK',
+    'acupuncture for dogs arthritis',
+  ],
+  relatedSlugs: [
+    'first-acupuncture-session-what-to-expect',
+    'acupuncture-arthritis-dogs',
+    'veterinary-acupuncture-cost-uk',
+  ],
   content: [
+    // --- Opening ---
     {
       type: 'emphasizedParagraph',
-      text: 'If you\'re reading this, you\'re probably a bit sceptical. Good. You should be. When someone suggests sticking needles into your dog, a healthy dose of "really?" is perfectly reasonable. I had the same reaction when I first encountered veterinary acupuncture as a newly qualified vet in the late 1990s.',
+      text: 'I understand the scepticism. When most people think of acupuncture, they picture something vaguely mystical. Talk of energy channels, maybe some relaxation music. It sounds more like a spa treatment than veterinary medicine.',
     },
     {
       type: 'paragraph',
-      text: 'Twenty-five years and thousands of patients later, I\'ve watched acupuncture transform the quality of life for dogs that had run out of conventional options. I\'ve also seen cases where it didn\'t help. That honesty matters, because understanding what acupuncture can and can\'t do is the first step in deciding whether it\'s right for your dog.',
+      text: 'So when I tell a dog owner that placing thin needles into specific points on their dog\'s body will help manage chronic pain, I\'m used to the look. Polite interest, slight narrowing of the eyes, and an unspoken question somewhere behind it all.',
     },
+    {
+      type: 'paragraph',
+      text: 'It\'s a fair reaction. I had a similar one myself, about 25 years ago.',
+    },
+
+    // --- How I came to veterinary acupuncture ---
     {
       type: 'heading',
       level: 2,
-      text: 'The Science Behind the Needles',
-      id: 'science-behind-needles',
+      text: 'How I came to veterinary acupuncture',
+      id: 'how-i-came-to-acupuncture',
     },
     {
       type: 'paragraph',
-      text: 'Let\'s get one thing clear from the start: veterinary acupuncture as practised in the UK is not mystical. It\'s not about energy channels or spiritual balance. Modern veterinary acupuncture is grounded in neurophysiology, and we understand increasingly well how it works.',
+      text: 'I graduated from the Royal (Dick) Veterinary College at Edinburgh University in 1995 with a firmly conventional training. Surgery, pharmacology, diagnostic imaging, evidence-based medicine. I wasn\'t looking for anything alternative.',
+    },
+    {
+      type: 'paragraph',
+      text: 'But in clinical practice, I kept encountering the same problem. Dogs with chronic pain, particularly arthritis, where the conventional options were either insufficient or poorly tolerated. NSAIDs helped many patients, but some had gastrointestinal sensitivity. Others had concurrent liver or kidney disease that limited what we could safely prescribe. A proportion simply needed more on top of their existing medication.',
+    },
+    {
+      type: 'paragraph',
+      text: 'I trained in veterinary acupuncture on the first recognised UK course run by the Association of British Veterinary Acupuncturists (ABVA). What I found was a treatment with a growing scientific evidence base, well-characterised neurophysiological mechanisms, and consistent clinical results. Not in every case. Not miraculous results. But consistent enough that it became a central part of how I manage pain across my caseload.',
+    },
+
+    // --- The neurophysiology ---
+    {
+      type: 'heading',
+      level: 2,
+      text: 'The neurophysiology: how acupuncture works',
+      id: 'neurophysiology',
+    },
+    {
+      type: 'paragraph',
+      text: 'The traditional Chinese medicine framework has historical significance, and some practitioners use it effectively. But you don\'t need to accept the concept of energy meridians to understand why acupuncture produces clinical effects. The neurophysiological mechanisms are increasingly well characterised.',
+    },
+    {
+      type: 'paragraph',
+      text: 'When a needle is inserted at a specific acupuncture point, it stimulates nerve endings at sites where nerves and blood vessels travel closely together. The impulses travel to the spinal cord and brain, triggering several measurable responses.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Endogenous opioid release.</strong> Acupuncture stimulates the release of endorphins, enkephalins and endomorphins. These bind to opioid receptors in the brain and spinal cord, producing genuine analgesia. This has been measured in both human and animal studies and is one of the best-established mechanisms.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Descending pain inhibition.</strong> Acupuncture activates the descending inhibitory pain pathway through the release of serotonin (5-hydroxytryptamine) and noradrenaline. In practical terms, the brain sends signals back down the spinal cord that dampen incoming pain messages. Recent research has demonstrated that acupuncture activates specific supraspinal pathways within the brain to achieve this effect.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Anti-inflammatory effects.</strong> At the spinal level, acupuncture reduces the release of pro-inflammatory cytokines including interleukin-1 beta, interleukin-6 and cyclooxygenase-2. This means it has a direct anti-inflammatory action, not just a pain-masking one. There is also emerging evidence that acupuncture may inhibit microglial activation, which plays a key role in neuropathic pain states.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Local circulatory and muscular effects.</strong> Needle insertion causes local vasodilation, improving blood flow to the area. This increases oxygen delivery, removes inflammatory waste products, and improves healing conditions. There is also a direct muscle relaxation effect, which is particularly relevant for dogs with compensatory muscle tension from chronic lameness.',
     },
     {
       type: 'callout',
       variant: 'science',
-      title: 'How acupuncture works: the short version',
-      text: 'When a fine needle is inserted into specific points on the body, it stimulates nerve fibres that send signals to the spinal cord and brain. This triggers the release of endorphins (the body\'s natural painkillers), serotonin, and other neurochemicals that reduce pain, decrease inflammation, and promote healing. This is known as the neuromodulatory effect of acupuncture.',
+      title: 'Peer-reviewed basis',
+      text: 'Dewey and Xie published a comprehensive review in the <em>Open Veterinary Journal</em> (2021) summarising two decades of evidence for the scientific basis of acupuncture in veterinary pain management. The mechanisms described above are real, measurable and reproducible.',
     },
-    {
-      type: 'paragraph',
-      text: 'There are three main mechanisms that make acupuncture effective for dogs:',
-    },
-    {
-      type: 'list',
-      style: 'unordered',
-      items: [
-        'Pain-gate theory: The needle stimulation activates large nerve fibres that effectively "close the gate" on pain signals travelling to the brain. This is the same principle behind rubbing a sore elbow after you bang it.',
-        'Endorphin release: Acupuncture triggers the release of endorphins, enkephalins, and dynorphins. These are your dog\'s own powerful painkillers, produced naturally by the body.',
-        'Local tissue effects: At the needle site itself, there\'s an increase in blood flow and a local anti-inflammatory response. This helps with tissue healing and reduces muscle spasm.',
-      ],
-    },
-    {
-      type: 'paragraph',
-      text: 'None of this is controversial in the scientific community. These mechanisms have been demonstrated repeatedly in peer-reviewed research, including studies specifically in dogs and other veterinary species.',
-    },
+
+    // --- What the evidence says ---
     {
       type: 'heading',
       level: 2,
-      text: 'What Does the Research Actually Say?',
-      id: 'research-evidence',
+      text: 'What the evidence says',
+      id: 'evidence',
     },
     {
       type: 'paragraph',
-      text: 'The evidence base for veterinary acupuncture has grown substantially over the past two decades. It\'s worth being straight about this: the evidence is stronger for some conditions than others.',
-    },
-    {
-      type: 'twoColumn',
-      left: [
-        {
-          type: 'heading',
-          level: 3,
-          text: 'Strong Evidence',
-          id: 'strong-evidence',
-        },
-        {
-          type: 'list',
-          style: 'unordered',
-          items: [
-            'Chronic musculoskeletal pain (arthritis, back pain)',
-            'Post-operative pain management',
-            'Neurological conditions (intervertebral disc disease)',
-            'Muscle spasm and myofascial pain',
-          ],
-        },
-      ],
-      right: [
-        {
-          type: 'heading',
-          level: 3,
-          text: 'Emerging Evidence',
-          id: 'emerging-evidence',
-        },
-        {
-          type: 'list',
-          style: 'unordered',
-          items: [
-            'Gastrointestinal motility disorders',
-            'Urinary incontinence',
-            'Immune modulation',
-            'Anxiety and behavioural conditions',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'paragraph',
-      text: 'A systematic review published in the Journal of Veterinary Internal Medicine found that acupuncture produced measurable improvements in dogs with musculoskeletal conditions, with the most consistent results seen in chronic pain management. Several controlled studies have shown significant improvements in lameness scores, weight-bearing, and owner-assessed quality of life.',
+      text: 'The evidence base for veterinary acupuncture has strengthened considerably in recent years. It\'s important to be accurate about what it shows.',
     },
     {
       type: 'heading',
-      level: 2,
-      text: 'What I See in Practice',
-      id: 'clinical-experience',
+      level: 3,
+      text: 'Professional body endorsement',
+      id: 'professional-endorsement',
     },
     {
       type: 'paragraph',
-      text: 'Research papers are important. But after 25 years of treating dogs in their own homes, I can tell you what the statistics look like in the real world.',
-    },
-    {
-      type: 'quote',
-      variant: 'pullquote',
-      text: 'The dogs that respond best are often the ones whose owners were most sceptical at the start. I think that says something about how undeniable the results can be when acupuncture works well.',
+      text: 'The 2015 AAHA/AAFP Pain Management Guidelines stated that acupuncture "offers a compelling and safe method for pain management in veterinary patients and should be strongly considered as a part of multimodal pain management plans." The updated 2022 AAHA guidelines continued to highlight acupuncture among non-pharmacological methods recommended for integration into pain management strategies.',
     },
     {
       type: 'paragraph',
-      text: 'The majority of dogs I treat show noticeable improvement within the first three to four sessions. For arthritis, the most common condition I see, owners typically report that their dog is more willing to go on walks, getting up more easily in the morning, or managing the stairs again. These are practical, measurable changes in daily life.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Some dogs respond dramatically. I\'ve had patients that were barely weight-bearing on a limb and, after a course of treatment, were trotting comfortably again. Others show more modest but still meaningful improvement: sleeping more soundly, being less stiff after rest, or showing more interest in playing.',
-    },
-    {
-      type: 'callout',
-      variant: 'tip',
-      title: 'Home visits make a difference',
-      text: 'Treating dogs in their own home gives me a huge clinical advantage. I can see how they move on their own floors, watch them navigate their own stairs, and assess them in an environment where they\'re relaxed rather than stressed by a clinic visit. Many dogs that would be tense and guarded in a veterinary practice are completely relaxed at home, which means the acupuncture can work more effectively.',
+      text: 'The 2022 WSAVA Global Pain Management Guidelines, published in the <em>Journal of Small Animal Practice</em>, include acupuncture in their recommendations and specifically note that the evidence of its efficacy has increased for certain pain conditions.',
     },
     {
       type: 'heading',
-      level: 2,
-      text: 'Conditions That Respond Best',
-      id: 'conditions-respond-best',
+      level: 3,
+      text: 'Clinical outcome data',
+      id: 'clinical-outcome-data',
     },
     {
       type: 'paragraph',
-      text: 'Not every condition responds equally to acupuncture. Here\'s an honest assessment based on my clinical experience of where acupuncture makes the biggest difference:',
+      text: 'A 2017 prospective study published in the <em>Canadian Veterinary Journal</em> followed 181 dogs with neurological and musculoskeletal diseases treated with acupuncture alone or combined with analgesics. The success rates were substantial:',
     },
     {
       type: 'keyTakeaway',
-      title: 'Best Responders to Veterinary Acupuncture',
+      title: 'Key findings from the 2017 study',
       points: [
-        'Osteoarthritis and degenerative joint disease, particularly in older dogs',
-        'Back pain, spondylosis, and intervertebral disc disease (IVDD)',
-        'Post-surgical recovery, especially after orthopaedic operations like TPLO',
-        'Chronic pain conditions where long-term medication use is a concern',
-        'Muscle tension, trigger points, and myofascial pain syndromes',
-        'Mobility issues in elderly dogs where quality of life is the priority',
+        '<strong>79%</strong> improvement on the Helsinki Chronic Pain Index',
+        '<strong>84%</strong> improvement in owner-assessed quality of life',
+        '<strong>78%</strong> improvement on visual analogue scales for both pain and locomotion',
+        'Dogs with musculoskeletal conditions showed significantly greater improvement than those with neurological disorders',
       ],
     },
     {
       type: 'heading',
-      level: 2,
-      text: 'Being Honest About Limitations',
-      id: 'limitations',
+      level: 3,
+      text: 'Osteoarthritis evidence',
+      id: 'osteoarthritis-evidence',
     },
     {
       type: 'paragraph',
-      text: 'I think the credibility of acupuncture is best served by being upfront about what it can\'t do. Acupuncture is not a miracle cure. It doesn\'t work for every dog or every condition.',
+      text: 'Multiple studies have investigated acupuncture for canine osteoarthritis with encouraging results. Published trials have reported improvements in validated chronic pain scores (including the Canine Brief Pain Inventory), owner-assessed function, and veterinary-assessed locomotion.',
+    },
+    {
+      type: 'paragraph',
+      text: 'A 2020 randomised, placebo-controlled, blinded clinical trial published in <em>BMC Veterinary Research</em> found that while objective gait analysis measures didn\'t reach significance, owner-completed clinical metrology instruments did record treatment response, consistent with real-world clinical observations that owners can detect functional improvements.',
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: 'Intervertebral disc disease',
+      id: 'ivdd-evidence',
+    },
+    {
+      type: 'paragraph',
+      text: 'The evidence for acupuncture in IVDD is notable. Research has shown that electroacupuncture combined with standard medical treatment led to faster recovery of ambulation and deep pain sensation in dogs with thoracolumbar disc disease compared to conventional treatment alone.',
+    },
+    {
+      type: 'paragraph',
+      text: 'One study found electroacupuncture was more effective (79% success) than delayed decompressive surgery (40%) for return of ambulation in dogs with severe (grades IV and V) thoracolumbar IVDD. A 2024 critically appraised topic published in <em>Veterinary Evidence</em> assessed the evidence for acupuncture in thoracolumbar disc extrusion and rated the strength of evidence as moderate.',
+    },
+    {
+      type: 'paragraph',
+      text: 'A 2025 randomised controlled trial published in the journal <em>Animals</em> evaluated laser acupuncture in dogs with osteoarthritis and found significant improvements in pain scores in the treatment group after 30 days, while the control group showed no change.',
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: 'The honest caveats',
+      id: 'honest-caveats',
     },
     {
       type: 'callout',
       variant: 'warning',
-      title: 'Important to understand',
-      text: 'Acupuncture works best as part of a multimodal approach. It\'s not a replacement for surgery when surgery is needed, or for pain medication when pain is severe. The best outcomes come from using acupuncture alongside conventional veterinary care, not instead of it.',
+      title: 'An important distinction',
+      text: 'The 2024 <em>Veterinary Evidence</em> review assessed acupuncture as a sole analgesic (without other pain medication) and concluded the evidence for that specific application is weak. The strongest case for acupuncture is as part of a multimodal approach, used alongside conventional treatment rather than replacing it entirely. This is exactly how the AAHA, AAFP and WSAVA guidelines recommend its use, and it reflects how I use it in clinical practice.',
     },
     {
       type: 'paragraph',
-      text: 'In my experience, roughly 70-80% of dogs show a meaningful response to acupuncture for musculoskeletal conditions. That means 20-30% don\'t respond significantly, and I\'m always upfront about that possibility with owners before we start. If there\'s no improvement after three or four sessions, I\'ll tell you honestly that acupuncture probably isn\'t the right approach for your dog.',
+      text: 'A 2024 review in the <em>Journal of Small Animal Practice</em> also noted that while published studies report improvements in validated pain scores and subjective outcome measures, further larger-scale randomised controlled trials would strengthen the evidence base further.',
     },
-    {
-      type: 'heading',
-      level: 2,
-      text: 'What to Realistically Expect',
-      id: 'realistic-expectations',
-    },
-    {
-      type: 'paragraph',
-      text: 'If you decide to try acupuncture for your dog, here\'s what a typical course looks like:',
-    },
-    {
-      type: 'list',
-      style: 'ordered',
-      items: [
-        'Initial consultation (about an hour): I\'ll examine your dog thoroughly, review their history, and discuss what we\'re trying to achieve. If acupuncture is appropriate, we\'ll do a first treatment.',
-        'Initial course (usually 4-6 weekly sessions): This is where we find out how your dog responds. Most dogs show improvement by session three or four.',
-        'Maintenance (typically every 3-6 weeks): Once we\'ve achieved a good response, we spread the sessions out to the minimum frequency that maintains the improvement.',
-      ],
-    },
-    {
-      type: 'paragraph',
-      text: 'Most dogs tolerate acupuncture extremely well. Many actually relax during treatment; it\'s not uncommon for dogs to fall asleep with needles in place. The needles are much finer than injection needles, and most dogs barely notice them going in.',
-    },
+
+    // --- What acupuncture treats in dogs ---
     {
       type: 'divider',
     },
     {
       type: 'heading',
       level: 2,
-      text: 'The Bottom Line',
-      id: 'bottom-line',
+      text: 'What acupuncture treats in dogs',
+      id: 'what-it-treats',
     },
     {
       type: 'paragraph',
-      text: 'Does acupuncture work for dogs? In most cases, yes. The scientific evidence supports it, and my clinical experience over 25 years confirms it. But it works best when you go in with realistic expectations, when it\'s used as part of a broader treatment plan, and when it\'s performed by a qualified veterinary acupuncturist who is honest about both its potential and its limitations.',
+      text: 'Based on the evidence and 25 years of clinical experience, the conditions where I see the most consistent benefit are:',
     },
     {
       type: 'paragraph',
-      text: 'If your dog is living with chronic pain, reduced mobility, or you\'re looking for ways to support their quality of life alongside conventional treatment, acupuncture is genuinely worth considering. I\'ve seen it make a real difference for thousands of dogs, and the science increasingly explains why.',
+      text: '<strong>Osteoarthritis.</strong> This is the most common indication and where the evidence is strongest. Dogs with chronic joint pain from hip, elbow, stifle or spinal arthritis frequently show measurable improvement in mobility and comfort. I see this regularly across breeds, particularly Labradors, Golden Retrievers and German Shepherds where degenerative joint disease is prevalent.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Spinal conditions.</strong> Spondylosis, intervertebral disc disease and chronic back pain are responsive to treatment. Electroacupuncture, where a gentle electrical current passes between needles, is particularly useful for nerve-related pain and in supporting recovery from disc disease. The published IVDD data supports this clinical observation.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Compensatory muscle pain.</strong> A dog favouring a painful limb overloads its back, shoulders and opposite leg. These secondary myofascial trigger points and muscle tensions often account for a significant proportion of the dog\'s discomfort. Acupuncture is effective at releasing these compensatory patterns, and this is an area where clinical response is often rapid and visible.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Post-surgical rehabilitation.</strong> After orthopaedic procedures such as cruciate ligament repair or spinal surgery, acupuncture supports recovery by managing pain, reducing muscle spasm and promoting tissue healing. I work alongside the primary vet and physiotherapist as part of the rehabilitation team.',
+    },
+    {
+      type: 'paragraph',
+      text: '<strong>Cases where conventional analgesia is limited.</strong> Some dogs have hepatic or renal compromise that restricts NSAID use. Others have gastrointestinal sensitivity. For these patients, acupuncture provides meaningful pain relief without adding systemic drug load. This is one of the most valuable clinical applications.',
+    },
+
+    // --- What acupuncture does not do ---
+    {
+      type: 'heading',
+      level: 2,
+      text: 'What acupuncture does not do',
+      id: 'what-it-doesnt-do',
+    },
+    {
+      type: 'paragraph',
+      text: 'Acupuncture does not cure arthritis or regenerate cartilage. It manages pain, improves function, and by allowing more normal movement, may help slow the secondary consequences of chronic lameness.',
+    },
+    {
+      type: 'paragraph',
+      text: 'It is not a replacement for surgery when surgery is indicated. A ruptured cruciate ligament needs surgical repair. Acupuncture can support pain management before and rehabilitation after surgery, but it cannot fix structural damage.',
+    },
+    {
+      type: 'quote',
+      variant: 'pullquote',
+      text: 'If I don\'t see clinical improvement after three to four sessions, I discuss that honestly with the owner. There is no justification for continuing treatment that isn\'t producing results.',
+    },
+    {
+      type: 'paragraph',
+      text: 'It does not work equally well for every patient. Based on published data and my own clinical experience, roughly 75\u201380% of dogs show meaningful improvement. For the remainder, the response may be minimal.',
+    },
+    {
+      type: 'paragraph',
+      text: 'And it does not replace proper diagnosis. Before any acupuncture treatment, we need to understand the underlying condition. That means thorough clinical examination and, where appropriate, diagnostic imaging. I will not treat a patient without a clear clinical picture.',
+    },
+
+    // --- What a session involves ---
+    {
+      type: 'heading',
+      level: 2,
+      text: 'What a session involves',
+      id: 'what-a-session-involves',
+    },
+    {
+      type: 'paragraph',
+      text: 'Every session begins with a clinical assessment. I watch the dog move, palpate the spine and limbs for areas of tension and pain response, and review the current management plan. This hands-on evaluation is important because it determines where the needles need to go. Acupuncture isn\'t a fixed recipe applied the same way each time; the point selection is tailored to what I find on the day.',
+    },
+    {
+      type: 'callout',
+      variant: 'tip',
+      title: 'Most dogs relax during treatment',
+      text: 'The needles are very fine, considerably thinner than injection needles. Most dogs settle within a minute or two of placement. A large proportion become visibly relaxed or fall asleep during treatment. This is a consistent observation across thousands of sessions and reflects the endogenous opioid release that the research describes.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Needles remain in place for 10 to 20 minutes depending on the individual case. The standard protocol begins with an initial course of three to four weekly sessions, followed by maintenance at gradually increasing intervals. Most of my long-term patients settle into a rhythm of every four to six weeks, though this varies with severity and individual response.',
+    },
+
+    // --- The regulatory position ---
+    {
+      type: 'heading',
+      level: 2,
+      text: 'The regulatory position',
+      id: 'regulatory-position',
     },
     {
       type: 'callout',
       variant: 'info',
-      title: 'Thinking about acupuncture for your dog?',
-      text: 'We treat dogs (and cats) in their own homes across London and the surrounding areas. If you\'d like to discuss whether acupuncture could help your pet, get in touch for a no-obligation chat. We\'re always happy to talk through the options honestly.',
+      title: 'UK law',
+      text: 'Under UK law, acupuncture on animals may only be performed by a qualified veterinary surgeon. The anatomical knowledge required to place needles safely, understanding the relationship between needle placement and underlying nerves, blood vessels and organs, requires veterinary training. The Royal College of Veterinary Surgeons emphasises evidence-based decision making, and both Claire and I are registered members of the ABVA, which maintains professional standards for education and practice in veterinary acupuncture.',
+    },
+
+    // --- The summary ---
+    {
+      type: 'heading',
+      level: 2,
+      text: 'The summary',
+      id: 'summary',
+    },
+    {
+      type: 'paragraph',
+      text: 'Veterinary acupuncture is a treatment with well-characterised neurophysiological mechanisms, growing clinical evidence, and endorsement from the major professional bodies (AAHA, AAFP, WSAVA) as part of multimodal pain management. It is not a cure-all, it does not work for every patient, and the evidence base would benefit from further large-scale trials. But for chronic pain, musculoskeletal conditions and rehabilitation, it is a genuinely useful clinical tool.',
+    },
+    {
+      type: 'paragraph',
+      text: 'I would not have spent 25 years practising it, referring vets would not send me their patients, and the 78 veterinary surgeries that refer to our practice would not continue to do so, if it did not produce real clinical results.',
+    },
+    {
+      type: 'emphasizedParagraph',
+      text: 'If your dog has arthritis, chronic pain, spinal problems, or is recovering from surgery, acupuncture is worth discussing with your vet. Not as a replacement for conventional treatment, but as part of a considered, multimodal approach. The two work better together.',
     },
   ],
 };

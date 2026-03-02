@@ -12,7 +12,7 @@ export function KeyTakeawayBlock({ title, points }: KeyTakeawayBlockType) {
         {points.map((point, i) => (
           <li key={i} className="flex items-start gap-3 text-foreground/85 text-[15px] leading-relaxed">
             <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
-            {point}
+            <span dangerouslySetInnerHTML={{ __html: point }} />
           </li>
         ))}
       </ul>

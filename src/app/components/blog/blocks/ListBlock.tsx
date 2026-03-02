@@ -14,7 +14,7 @@ export function ListBlock({ style, items }: ListBlockType) {
           key={i}
           className={style === 'unordered' ? 'relative pl-2 before:content-[""] before:absolute before:-left-4 before:top-[10px] before:w-2 before:h-2 before:rounded-full before:bg-accent/60' : ''}
         >
-          {item}
+          <span dangerouslySetInnerHTML={{ __html: item }} />
         </li>
       ))}
     </Tag>
