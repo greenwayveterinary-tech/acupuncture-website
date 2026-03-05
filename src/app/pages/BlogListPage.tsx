@@ -24,14 +24,14 @@ export function BlogListPage() {
     '@type': 'CollectionPage',
     name: 'Veterinary Acupuncture Blog',
     description: 'Expert veterinary acupuncture articles by qualified vets. Evidence-based insights on acupuncture for dogs, cats, and horses.',
-    url: 'https://acupuncture-vet.co.uk/blog',
+    url: 'https://acupuncture-website-three.vercel.app/blog',
     publisher: {
       '@type': 'Organization',
       name: 'Greenway Veterinary Acupuncture',
-      url: 'https://acupuncture-vet.co.uk',
+      url: 'https://acupuncture-website-three.vercel.app',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://acupuncture-vet.co.uk/og-default.jpg',
+        url: 'https://acupuncture-website-three.vercel.app/og-default.jpg',
       },
     },
     mainEntity: {
@@ -39,7 +39,7 @@ export function BlogListPage() {
       itemListElement: allPosts.map((post, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://acupuncture-vet.co.uk/blog/${post.slug}`,
+        url: `https://acupuncture-website-three.vercel.app/blog/${post.slug}`,
         name: post.title,
       })),
     },
@@ -53,13 +53,13 @@ export function BlogListPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://acupuncture-vet.co.uk',
+        item: 'https://acupuncture-website-three.vercel.app',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://acupuncture-vet.co.uk/blog',
+        item: 'https://acupuncture-website-three.vercel.app/blog',
       },
     ],
   };

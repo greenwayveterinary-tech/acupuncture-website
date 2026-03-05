@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const SITE_URL = 'https://acupuncture-vet.co.uk';
+const SITE_URL = 'https://acupuncture-website-three.vercel.app';
 const SITE_NAME = 'Greenway Veterinary Acupuncture';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
 
