@@ -19,12 +19,58 @@ export function BlogListPage() {
       ? allPosts.slice(1)
       : allPosts.filter((p) => p.category === selectedCategory && p.slug !== featuredPost?.slug);
 
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Veterinary Acupuncture Blog',
+    description: 'Expert veterinary acupuncture articles by qualified vets. Evidence-based insights on acupuncture for dogs, cats, and horses.',
+    url: 'https://acupuncture-vet.co.uk/blog',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Greenway Veterinary Acupuncture',
+      url: 'https://acupuncture-vet.co.uk',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://acupuncture-vet.co.uk/og-default.png',
+      },
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: allPosts.map((post, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://acupuncture-vet.co.uk/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://acupuncture-vet.co.uk',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://acupuncture-vet.co.uk/blog',
+      },
+    ],
+  };
+
   return (
     <div className="bg-secondary min-h-screen">
       <SEO
         title="Blog"
         description="Expert veterinary acupuncture articles by qualified vets. Evidence-based insights on acupuncture for dogs, cats, and horses."
         path="/blog"
+        jsonLd={[collectionJsonLd, breadcrumbJsonLd]}
       />
 
       {/* Hero */}

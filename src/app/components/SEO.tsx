@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://acupuncture-vet.co.uk';
 const SITE_NAME = 'Greenway Veterinary Acupuncture';
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.png`;
 
 interface SEOProps {
   title: string;
@@ -17,6 +18,13 @@ interface SEOProps {
 export function SEO({ title, description, path, ogType, ogImage, publishedAt, updatedAt, jsonLd }: SEOProps) {
   const url = `${SITE_URL}${path}`;
   const fullTitle = path === '/' ? title : `${title} | ${SITE_NAME}`;
+  const image = ogImage || DEFAULT_OG_IMAGE;
+
+  const jsonLdItems = jsonLd
+    ? Array.isArray(jsonLd)
+      ? jsonLd
+      : [jsonLd]
+    : [];
 
   return (
     <Helmet>
@@ -28,17 +36,18 @@ export function SEO({ title, description, path, ogType, ogImage, publishedAt, up
       <meta property="og:url" content={url} />
       <meta property="og:type" content={ogType || 'website'} />
       <meta property="og:site_name" content={SITE_NAME} />
-      {ogImage && <meta property="og:image" content={ogImage} />}
+      <meta property="og:image" content={image} />
       {publishedAt && <meta property="article:published_time" content={publishedAt} />}
       {updatedAt && <meta property="article:modified_time" content={updatedAt} />}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {jsonLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(Array.isArray(jsonLd) ? jsonLd : jsonLd)}
+      <meta name="twitter:image" content={image} />
+      {jsonLdItems.map((item, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(item)}
         </script>
-      )}
+      ))}
     </Helmet>
   );
 }

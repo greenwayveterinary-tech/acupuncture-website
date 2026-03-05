@@ -30,20 +30,28 @@ export function BlogPostPage() {
     description: post.description,
     datePublished: post.publishedAt,
     ...(post.updatedAt && { dateModified: post.updatedAt }),
+    image: post.heroImage || 'https://acupuncture-vet.co.uk/og-default.png',
     author: {
       '@type': 'Person',
       name: author?.name,
       jobTitle: author?.role,
+      url: 'https://acupuncture-vet.co.uk',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Greenway Veterinary Acupuncture',
       url: 'https://acupuncture-vet.co.uk',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://acupuncture-vet.co.uk/og-default.png',
+      },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://acupuncture-vet.co.uk/blog/${post.slug}`,
     },
+    articleSection: post.category,
+    keywords: post.tags.join(', '),
   };
 
   const breadcrumbJsonLd = {
