@@ -31,7 +31,7 @@ export function BlogListPage() {
       url: 'https://acupuncture-vet.co.uk',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://acupuncture-vet.co.uk/og-default.png',
+        url: 'https://acupuncture-vet.co.uk/og-default.jpg',
       },
     },
     mainEntity: {

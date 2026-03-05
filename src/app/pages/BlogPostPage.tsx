@@ -30,7 +30,7 @@ export function BlogPostPage() {
     description: post.description,
     datePublished: post.publishedAt,
     ...(post.updatedAt && { dateModified: post.updatedAt }),
-    image: post.heroImage || 'https://acupuncture-vet.co.uk/og-default.png',
+    image: post.heroImage || 'https://acupuncture-vet.co.uk/og-default.jpg',
     author: {
       '@type': 'Person',
       name: author?.name,
@@ -43,7 +43,7 @@ export function BlogPostPage() {
       url: 'https://acupuncture-vet.co.uk',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://acupuncture-vet.co.uk/og-default.png',
+        url: 'https://acupuncture-vet.co.uk/og-default.jpg',
       },
     },
     mainEntityOfPage: {
