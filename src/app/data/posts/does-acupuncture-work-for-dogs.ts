@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/app/types/blog';
+import heroImg from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.jpg';
 
 export const doesAcupunctureWorkForDogs: BlogPost = {
   slug: 'does-acupuncture-work-for-dogs',
@@ -10,6 +11,7 @@ export const doesAcupunctureWorkForDogs: BlogPost = {
   authorSlug: 'alastair-greenway',
   publishedAt: '2026-03-01',
   readingTime: 9,
+  heroImage: heroImg,
   tags: [
     'acupuncture for dogs',
     'does dog acupuncture work',

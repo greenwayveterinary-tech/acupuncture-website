@@ -20,7 +20,18 @@ export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
       transition={{ duration: 0.5 }}
       className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100"
     >
-      <Link to={`/blog/${post.slug}`} className="block p-6 md:p-8">
+      <Link to={`/blog/${post.slug}`} className="block">
+        {post.heroImage && (
+          <div className="aspect-[21/9] overflow-hidden">
+            <img
+              src={post.heroImage}
+              alt={post.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+        )}
+        <div className="p-6 md:p-8">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-xs font-medium uppercase tracking-wider text-accent bg-accent/10 px-2.5 py-1 rounded-full">
             {post.category}
@@ -55,6 +66,7 @@ export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
           <span className="text-accent font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
             Read <ArrowRight className="w-4 h-4" />
           </span>
+        </div>
         </div>
       </Link>
     </motion.article>

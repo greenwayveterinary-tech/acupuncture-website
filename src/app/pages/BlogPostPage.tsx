@@ -129,6 +129,24 @@ export function BlogPostPage() {
         </div>
       </section>
 
+      {/* Hero Image */}
+      {post.heroImage && (
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 -mt-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="rounded-2xl overflow-hidden shadow-lg"
+          >
+            <img
+              src={post.heroImage}
+              alt={post.title}
+              className="w-full h-auto max-h-[400px] object-cover"
+            />
+          </motion.div>
+        </div>
+      )}
+
       {/* Content */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
         <div className="flex gap-6">
