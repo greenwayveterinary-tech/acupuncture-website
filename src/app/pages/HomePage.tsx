@@ -806,6 +806,88 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Our Locations */}
+      <section className="bg-secondary py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-serif text-foreground text-center mb-4"
+          >
+            Our Locations
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-center text-muted-foreground mb-12"
+          >
+            Visit us at one of our therapy centres across London and Buckinghamshire
+          </motion.p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Fido's of Fitzrovia",
+                description: "Located in the heart of London, between Regents Park and Oxford Street",
+                address: "87 Great Portland St, London, W1W 7LU",
+                mapQuery: "Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU",
+                mapsUrl: "https://www.google.com/maps/search/?api=1&query=Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU",
+              },
+              {
+                name: "FlowMotion Hydrotherapy",
+                description: "Easy free parking with drive-up access — ideal for less mobile pets",
+                address: "Unit 7, Bow Triangle Business Centre, Eleanor Street, London, E3 4UR",
+                mapQuery: "Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
+                mapsUrl: "https://www.google.com/maps/search/?api=1&query=Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
+              },
+              {
+                name: "Bretton",
+                description: "South Buckinghamshire location — coming soon",
+                address: "Wycombe Rd, Studley Green, Buckinghamshire, HP14 3XA",
+                mapQuery: "Bretton+Wycombe+Rd+Studley+Green+Buckinghamshire+HP14+3XA",
+                mapsUrl: "https://www.google.com/maps/search/?api=1&query=Bretton+Wycombe+Rd+Studley+Green+Buckinghamshire+HP14+3XA",
+              },
+            ].map((location, i) => (
+              <motion.div
+                key={location.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                className="bg-card rounded-2xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden border border-border"
+              >
+                <div className="aspect-[16/10] w-full">
+                  <iframe
+                    title={`Map of ${location.name}`}
+                    src={`https://www.google.com/maps?q=${location.mapQuery}&output=embed`}
+                    className="w-full h-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-serif text-foreground mb-1">{location.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{location.description}</p>
+                  <a
+                    href={location.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-2 text-sm text-accent hover:underline transition-colors"
+                  >
+                    <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                    {location.address}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQs */}
       <section id="faqs" className="bg-primary py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
