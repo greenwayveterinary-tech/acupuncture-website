@@ -834,28 +834,28 @@ export function HomePage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-center text-foreground/70 text-lg mb-12"
           >
-            Visit us at one of our therapy centres across London and Buckinghamshire
+            Visit us at one of our partner locations across London and The Chilterns
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 name: "Fido's of Fitzrovia",
-                description: "Located in the heart of London, between Regents Park and Oxford Street, ideal for mobile or portable dogs, with the bonus of on-site boutique wellbeing services",
+                description: "Located in the heart of London, between Regents Park and Oxford Street - ideal for mobile or portable dogs, with the bonus of on-site boutique doggy shopping, grooming and wellbeing services",
                 address: "87 Great Portland St, London, W1W 7LU",
                 mapQuery: "Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU",
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU",
               },
               {
                 name: "FlowMotion Hydrotherapy",
-                description: "Located in Bow, East London, free parking, drive-up access - ideal for less mobile dogs and for cats, rabbits or reactive dogs who need a dog-free, quiet environment",
+                description: "Located in Bow, East London with free parking and drive-up access - ideal for less mobile dogs and for cats, rabbits or reactive dogs who need a dog-free, quiet environment",
                 address: "Unit 7, Bow Triangle Business Centre, Eleanor Street, London, E3 4UR",
                 mapQuery: "Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
               },
               {
                 name: "Community Centre at Studley Green",
-                description: "Located just off the M40 between High Wycombe and Oxford with plenty of free parking. A quiet, peaceful space ideal for all dogs, cats and rabbits, with the bonus of a dog-friendly garden centre and cafe next-door",
+                description: "Located within the Community Centre at Studley Green, just off the M40 between High Wycombe and Oxford.  A quiet, peaceful space with plenty of free parking - ideal for all dogs, cats and rabbits, with the bonus of a dog-friendly garden centre and cafe opposite",
                 address: "Wycombe Road, Studley Green, High Wycombe, HP14 3UY",
                 mapQuery: "Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY",
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY",
