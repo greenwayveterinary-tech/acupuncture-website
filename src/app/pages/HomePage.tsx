@@ -131,7 +131,7 @@ export function HomePage() {
       },
       {
         '@type': 'Place',
-        name: 'Kite's Nest',
+        name: "Kite's Nest",
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Wycombe Road, Studley Green',
