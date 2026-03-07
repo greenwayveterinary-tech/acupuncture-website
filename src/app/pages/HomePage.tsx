@@ -704,16 +704,16 @@ export function HomePage() {
               </Link>
             </div>
 
-            {/* Maintenance Home Visit */}
+            {/* Repeat Home-Visit */}
             <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col">
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-primary/20">
-                <h3 className="text-2xl font-serif text-foreground mb-2">Maintenance Home Visit</h3>
+                <h3 className="text-2xl font-serif text-foreground mb-2">Repeat Home-Visit</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Convenient follow-up sessions at home—limited slots available
+                  Convenient follow-up sessions at home. Limited slots available
                 </p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-serif text-accent">£126</span>
+                  <span className="text-5xl font-serif text-accent">£168</span>
                 </div>
               </div>
 
@@ -721,23 +721,19 @@ export function HomePage() {
               <div className="space-y-4 mb-8 flex-grow">
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Ongoing acupuncture treatment tailored to your pet's progress</p>
+                  <p className="text-foreground text-sm">30-45 minute home revisit</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Regular reassessment and adjustments to treatment plan and advice</p>
+                  <p className="text-foreground text-sm">Re-assessment and examination by the same vet</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Continued support for pain relief, mobility, and wellness</p>
+                  <p className="text-foreground text-sm">Acupuncture treatment tailored to your pet's progress</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Consistent care from a vet who knows your pet's history</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Advice on complementary therapies to support recovery</p>
+                  <p className="text-foreground text-sm">Continued advice on supportive complementary therapies</p>
                 </div>
               </div>
 
@@ -750,7 +746,7 @@ export function HomePage() {
               </Link>
             </div>
 
-            {/* In Clinic Treatment */}
+            {/* In-Clinic Treatment */}
             <div className="bg-accent/5 rounded-2xl p-8 border-2 border-accent hover:border-accent/80 transition-all hover:shadow-xl flex flex-col relative overflow-hidden">
               {/* Popular badge */}
               <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold">
@@ -759,12 +755,12 @@ export function HomePage() {
 
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-accent/20">
-                <h3 className="text-2xl font-serif text-foreground mb-2">In Clinic Treatment</h3>
+                <h3 className="text-2xl font-serif text-foreground mb-2">In-Clinic Treatment</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Calm, Comfortable Acupuncture Sessions in Our Clinics
+                  Calm, comfortable acupuncture sessions in our clinics
                 </p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-serif text-accent">£95</span>
+                  <span className="text-5xl font-serif text-accent">£162 / £120</span>
                 </div>
               </div>
 
@@ -772,23 +768,27 @@ export function HomePage() {
               <div className="space-y-4 mb-8 flex-grow">
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Professional acupuncture treatment with our experienced vet</p>
+                  <p className="text-foreground text-sm">Full review of your pet's clinical history and co-ordination with your vet</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Full review of your pet's clinical history (we obtain and assess records from your vet)</p>
+                  <p className="text-foreground text-sm">30 or 45 minute appointment with a RCVS veterinary surgeon (ABVA)</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Individualised care plan tailored to your pet's needs</p>
+                  <p className="text-foreground text-sm">Physical examination including mobility assessment</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Convenient, pet-friendly clinic environment</p>
+                  <p className="text-foreground text-sm">Professional acupuncture treatment</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Ideal for quick access to care without waiting lists</p>
+                  <p className="text-foreground text-sm">Convenient, pet-friendly choice of locations</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-foreground text-sm">Instant booking without waiting times</p>
                 </div>
               </div>
 
