@@ -531,7 +531,7 @@ export function HomePage() {
                   <Phone className="w-5 h-5" />
                   Contact us for Availability
                 </Link>
-                <p className="text-xs mt-2 invisible">spacer</p>
+                <p className="text-muted-foreground text-xs mt-2 invisible" aria-hidden="true">*Appointments cancelled with less than 24 hours' notice incur a 30% fee.</p>
               </div>
             </motion.div>
 
