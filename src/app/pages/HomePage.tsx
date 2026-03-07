@@ -594,7 +594,7 @@ export function HomePage() {
                   <div className="flex-1">
                     <h4 className="text-lg text-foreground mb-1 font-medium">Registration</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Book directly—we'll follow up to confirm suitability and review your pet's history.
+                      Add your details on-line and we'll follow up to find out a bit more about your pet and liaise with your vet.
                     </p>
                   </div>
                 </motion.div>
@@ -612,7 +612,7 @@ export function HomePage() {
                   <div className="flex-1">
                     <h4 className="text-lg text-foreground mb-1 font-medium">Schedule Your Appointment</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Book instantly through our calendar and we'll confirm before your visit.
+                      Book instantly through our calendar with an online payment. Manage or move your appointment up to 24 hours before*
                     </p>
                   </div>
                 </motion.div>
