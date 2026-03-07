@@ -125,6 +125,17 @@ export function HomePage() {
           addressCountry: 'GB',
         },
       },
+      {
+        '@type': 'Place',
+        name: 'Bretton',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Wycombe Rd, Studley Green',
+          addressLocality: 'Buckinghamshire',
+          postalCode: 'HP14 3XA',
+          addressCountry: 'GB',
+        },
+      },
     ],
   };
 

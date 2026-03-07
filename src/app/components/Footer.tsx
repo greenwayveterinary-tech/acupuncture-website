@@ -102,7 +102,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
                 >
-                  London & Surrounding Areas
+                  London & Buckinghamshire
                 </a>
               </li>
             </ul>

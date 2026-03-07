@@ -130,6 +130,11 @@ export function ContactPage() {
                           <p className="text-muted-foreground text-sm">87 Great Portland St</p>
                           <p className="text-muted-foreground text-sm">London, W1W 7LU</p>
                         </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Bretton+Wycombe+Rd+Studley+Green+Buckinghamshire+HP14+3XA" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">
+                          <p className="text-foreground font-medium">Bretton</p>
+                          <p className="text-muted-foreground text-sm">Wycombe Rd, Studley Green</p>
+                          <p className="text-muted-foreground text-sm">Buckinghamshire, HP14 3XA</p>
+                        </a>
                       </div>
                     </div>
                   </div>
