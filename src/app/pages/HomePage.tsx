@@ -131,12 +131,12 @@ export function HomePage() {
       },
       {
         '@type': 'Place',
-        name: 'Bretton',
+        name: 'Community Centre at Studley Green',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Wycombe Rd, Studley Green',
-          addressLocality: 'Buckinghamshire',
-          postalCode: 'HP14 3XA',
+          streetAddress: 'Wycombe Road, Studley Green',
+          addressLocality: 'High Wycombe',
+          postalCode: 'HP14 3UY',
           addressCountry: 'GB',
         },
       },
@@ -845,11 +845,11 @@ export function HomePage() {
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
               },
               {
-                name: "Bretton",
+                name: "Community Centre at Studley Green",
                 description: "South Buckinghamshire location — coming soon",
-                address: "Wycombe Rd, Studley Green, Buckinghamshire, HP14 3XA",
-                mapQuery: "Bretton+Wycombe+Rd+Studley+Green+Buckinghamshire+HP14+3XA",
-                mapsUrl: "https://www.google.com/maps/search/?api=1&query=Bretton+Wycombe+Rd+Studley+Green+Buckinghamshire+HP14+3XA",
+                address: "Wycombe Road, Studley Green, High Wycombe, HP14 3UY",
+                mapQuery: "Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY",
+                mapsUrl: "https://www.google.com/maps/search/?api=1&query=Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY",
               },
             ].map((location, i) => (
               <motion.div
