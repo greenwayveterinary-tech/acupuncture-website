@@ -281,7 +281,8 @@ export function ContactPage() {
                         <option value="">Select...</option>
                         <option value="dog">Dog</option>
                         <option value="cat">Cat</option>
-                        <option value="other">Other</option>
+                        <option value="rabbit">Rabbit</option>
+                        <option value="horse">Horse</option>
                       </select>
                     </div>
                   </div>
