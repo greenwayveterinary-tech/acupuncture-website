@@ -832,7 +832,7 @@ export function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-center text-muted-foreground mb-12"
+            className="text-center text-foreground/70 text-lg mb-12"
           >
             Visit us at one of our therapy centres across London and Buckinghamshire
           </motion.p>
