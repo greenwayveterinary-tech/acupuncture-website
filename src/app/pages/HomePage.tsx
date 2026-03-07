@@ -589,9 +589,9 @@ export function HomePage() {
                     1
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg text-foreground mb-1 font-medium">Choose Come to Us</h4>
+                    <h4 className="text-lg text-foreground mb-1 font-medium">Choose Visit Us</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Visit us in Central and East London locations for an in-clinic acupuncture session. South Bucks clinic location coming soon.
+                      Visit one of our London or Chiltern locations for an in-clinic acupuncture session
                     </p>
                   </div>
                 </motion.div>
