@@ -655,7 +655,7 @@ export function HomePage() {
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-primary/20">
                 <h3 className="text-2xl font-serif text-foreground mb-2">Initial Home Visit</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground mb-4 min-h-[3rem]">
                   Comprehensive consultation and treatment in the comfort and familiarity of your home. Contact us for availability
                 </p>
                 <div className="flex items-baseline gap-1">
@@ -709,7 +709,7 @@ export function HomePage() {
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-primary/20">
                 <h3 className="text-2xl font-serif text-foreground mb-2">Repeat Home-Visit</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground mb-4 min-h-[3rem]">
                   Convenient follow-up sessions at home. Limited slots available
                 </p>
                 <div className="flex items-baseline gap-1">
@@ -756,7 +756,7 @@ export function HomePage() {
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-accent/20">
                 <h3 className="text-2xl font-serif text-foreground mb-2">In-Clinic Treatment</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground mb-4 min-h-[3rem]">
                   Calm, comfortable acupuncture sessions in our clinics
                 </p>
                 <div className="flex items-baseline gap-1">
