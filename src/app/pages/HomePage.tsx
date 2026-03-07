@@ -439,10 +439,10 @@ export function HomePage() {
               className="relative bg-card p-8 rounded-2xl border-2 border-accent shadow-lg hover:shadow-2xl transition-shadow group flex flex-col"
             >
               {/* Icon header */}
-              <div className="flex items-center gap-4 mb-6">
-                <motion.div 
+              <div className="flex items-center gap-4 mb-6 min-h-[5rem]">
+                <motion.div
                   whileHover={{ rotate: 10, scale: 1.1 }}
-                  className="bg-accent/10 p-4 rounded-xl"
+                  className="bg-accent/10 p-4 rounded-xl shrink-0"
                 >
                   <Home className="text-accent w-8 h-8" />
                 </motion.div>
@@ -538,10 +538,10 @@ export function HomePage() {
               className="relative bg-card p-8 rounded-2xl border-2 border-accent shadow-lg hover:shadow-2xl transition-shadow group flex flex-col"
             >
               {/* Icon header */}
-              <div className="flex items-center gap-4 mb-6">
-                <motion.div 
+              <div className="flex items-center gap-4 mb-6 min-h-[5rem]">
+                <motion.div
                   whileHover={{ rotate: -10, scale: 1.1 }}
-                  className="bg-accent p-4 rounded-xl shadow-lg"
+                  className="bg-accent p-4 rounded-xl shadow-lg shrink-0"
                 >
                   <MapPin className="text-accent-foreground w-8 h-8" />
                 </motion.div>
