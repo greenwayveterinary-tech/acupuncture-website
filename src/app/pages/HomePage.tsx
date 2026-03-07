@@ -832,21 +832,21 @@ export function HomePage() {
             {[
               {
                 name: "Fido's of Fitzrovia",
-                description: "Located in the heart of London, between Regents Park and Oxford Street",
+                description: "Located in the heart of London, between Regents Park and Oxford Street, ideal for mobile or portable dogs, with the bonus of on-site boutique wellbeing services",
                 address: "87 Great Portland St, London, W1W 7LU",
                 mapQuery: "Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU",
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Fido's+of+Fitzrovia+87+Great+Portland+St+London+W1W+7LU",
               },
               {
                 name: "FlowMotion Hydrotherapy",
-                description: "Easy free parking with drive-up access — ideal for less mobile pets",
+                description: "Located in Bow, East London, free parking, drive-up access - ideal for less mobile dogs and for cats, rabbits or reactive dogs who need a dog-free, quiet environment",
                 address: "Unit 7, Bow Triangle Business Centre, Eleanor Street, London, E3 4UR",
                 mapQuery: "Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
               },
               {
                 name: "Community Centre at Studley Green",
-                description: "South Buckinghamshire location — coming soon",
+                description: "Located just off the M40 between High Wycombe and Oxford with plenty of free parking. A quiet, peaceful space ideal for all dogs, cats and rabbits, with the bonus of a dog-friendly garden centre and cafe next-door",
                 address: "Wycombe Road, Studley Green, High Wycombe, HP14 3UY",
                 mapQuery: "Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY",
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY",
