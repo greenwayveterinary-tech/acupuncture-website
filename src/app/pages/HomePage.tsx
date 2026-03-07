@@ -523,13 +523,16 @@ export function HomePage() {
                 </motion.div>
               </div>
 
-              <Link
-                to="/contact"
-                className="flex items-center justify-center gap-2 w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 py-4 rounded-xl transition-all group-hover:shadow-lg font-medium"
-              >
-                <Phone className="w-5 h-5" />
-                Contact us for Availability
-              </Link>
+              <div>
+                <Link
+                  to="/contact"
+                  className="flex items-center justify-center gap-2 w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 py-4 rounded-xl transition-all group-hover:shadow-lg font-medium"
+                >
+                  <Phone className="w-5 h-5" />
+                  Contact us for Availability
+                </Link>
+                <p className="text-xs mt-2 invisible">spacer</p>
+              </div>
             </motion.div>
 
             {/* Clinic Visit */}
@@ -622,16 +625,18 @@ export function HomePage() {
                 </motion.div>
               </div>
 
-              <a
-                href="https://app.conciergevet.co.uk/book/gva-0f4570"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-4 rounded-xl transition-all shadow-md hover:shadow-xl font-medium"
-              >
-                <Calendar className="w-5 h-5" />
-                Book your clinic appointment now
-              </a>
-              <p className="text-muted-foreground text-xs mt-3 text-center">*Appointments cancelled with less than 24 hours' notice incur a 30% fee.</p>
+              <div>
+                <a
+                  href="https://app.conciergevet.co.uk/book/gva-0f4570"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-4 rounded-xl transition-all shadow-md hover:shadow-xl font-medium"
+                >
+                  <Calendar className="w-5 h-5" />
+                  Book your clinic appointment now
+                </a>
+                <p className="text-muted-foreground text-xs mt-2 text-center">*Appointments cancelled with less than 24 hours' notice incur a 30% fee.</p>
+              </div>
             </motion.div>
           </div>
         </div>
