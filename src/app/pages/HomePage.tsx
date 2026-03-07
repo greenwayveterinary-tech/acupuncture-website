@@ -67,7 +67,11 @@ export function HomePage() {
     },
     {
       question: "Do you have parking at the therapy centres? How do we get there?",
-      answer: "At FlowMotion Hydrotherapy Centre, yes there is easy free parking - you can drive your car right up to the door with the acupuncture room a few steps from the doorway. So this location is ideal for large, less mobile dogs or for cats and rabbits who want a quiet space and car transport.\n\nFido's of Fitzrovia is in the heart of London - there is no allocated free parking but there are numerous transport links and taxis can drop off right outside the door. There's also a lovely doggy shop and other wellness services on site."
+      answer: "At FlowMotion Hydrotherapy Centre, yes there is easy free parking - you can drive your car right up to the door with the acupuncture room a few steps from the doorway. So this location is ideal for large, less mobile dogs or for cats and rabbits who want a quiet space and car transport.\n\nFido's of Fitzrovia is in the heart of London - there is no allocated free parking but there are numerous transport links and taxis can drop off right outside the door. There's also a lovely doggy shop and other wellness services on site.\n\nStudley Green Community Centre is just off Junction 5/Stokenchurch of the M40 and there is masses of free parking."
+    },
+    {
+      question: "Are your clinics inside a vet surgery?",
+      answer: "No, we are intentionally located in non-surgery spaces to minimise the association for pets who feel stress when visiting a vet clinic. The timings and locations have been chosen to give your pet a calm, individual experience away from others, and minimal or zero waiting time.  If you arrive early, you can wait in your car right outside the door (FlowMotion and Kite's Nest), have a sniff around the park (Kite's Nest) or have a browse in the doggy boutique (Fido's)"
     },
     {
       question: "Can I speak to you first for advice?",
