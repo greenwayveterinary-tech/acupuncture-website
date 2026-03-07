@@ -880,7 +880,7 @@ export function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-serif text-foreground mb-1">{location.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{location.description}</p>
+                  <p className="text-sm text-foreground/70 mb-3">{location.description}</p>
                   <a
                     href={location.mapsUrl}
                     target="_blank"
