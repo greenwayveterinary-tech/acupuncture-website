@@ -66,6 +66,10 @@ export function HomePage() {
       video: "https://www.youtube.com/embed/H4uVRcs-s5g"
     },
     {
+      question: "Do you have parking at the therapy centres? How do we get there?",
+      answer: "At FlowMotion Hydrotherapy Centre, yes there is easy free parking — you can drive your car right up to the door with the acupuncture room a few steps from the doorway. So this location is ideal for large, less mobile dogs or for cats and rabbits who want a quiet space and car transport."
+    },
+    {
       question: "Can I speak to you first for advice?",
       answer: "Yes, of course. If you'd like to speak to us regarding suitability of your pet for acupuncture treatment, contact us by email or phone. Our answering service will take your number and Alastair or Claire will call you back as soon as we're free."
     },
