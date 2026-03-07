@@ -448,7 +448,7 @@ export function HomePage() {
                 </motion.div>
                 <div>
                   <h3 className="text-2xl font-serif text-foreground">Home Visit</h3>
-                  <p className="text-accent text-sm font-medium">Limited Availability</p>
+                  <p className="text-accent text-sm font-medium">Limited Availability — <em>Low Mobility Pet Families Prioritised</em></p>
                 </div>
               </div>
 
@@ -475,9 +475,9 @@ export function HomePage() {
                     1
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg text-foreground mb-1 font-medium">Choose a Home Visit</h4>
+                    <h4 className="text-lg text-foreground mb-1 font-medium">Choose Home Visit</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      A stress-free session in the comfort of your pet's familiar environment.
+                      In the comfort of your pet's familiar environment. Ideal for families with transport or mobility challenges.
                     </p>
                   </div>
                 </motion.div>
@@ -493,9 +493,9 @@ export function HomePage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg text-foreground mb-1 font-medium">Registration & Suitability Check</h4>
+                    <h4 className="text-lg text-foreground mb-1 font-medium">Registration</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      We'll confirm availability in your area and assess if acupuncture is suitable for your pet.
+                      We'll confirm availability in your area, find out a bit more about your pet from you and liaise with your vet.
                     </p>
                   </div>
                 </motion.div>
@@ -513,7 +513,7 @@ export function HomePage() {
                   <div className="flex-1">
                     <h4 className="text-lg text-foreground mb-1 font-medium">Schedule Your Appointment</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      We'll send you several appointment options to choose from.
+                      We'll send you the next available home visit slot.
                     </p>
                   </div>
                 </motion.div>
@@ -547,7 +547,7 @@ export function HomePage() {
                 </motion.div>
                 <div>
                   <h3 className="text-2xl font-serif text-foreground">Clinic Visit</h3>
-                  <p className="text-accent text-sm font-medium">Instant Booking</p>
+                  <p className="text-accent text-sm font-medium">Instant Booking — <em>At therapy centres with parking and transport links</em></p>
                 </div>
               </div>
 
@@ -576,7 +576,7 @@ export function HomePage() {
                   <div className="flex-1">
                     <h4 className="text-lg text-foreground mb-1 font-medium">Choose Come to Us</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Visit us at our London locations for an in-clinic acupuncture session.
+                      Visit us in Central and East London locations for an in-clinic acupuncture session. South Bucks clinic location coming soon.
                     </p>
                   </div>
                 </motion.div>
@@ -592,7 +592,7 @@ export function HomePage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg text-foreground mb-1 font-medium">Registration & Suitability Check</h4>
+                    <h4 className="text-lg text-foreground mb-1 font-medium">Registration</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       Book directly—we'll follow up to confirm suitability and review your pet's history.
                     </p>
