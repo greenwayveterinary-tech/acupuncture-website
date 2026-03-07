@@ -67,7 +67,7 @@ export function HomePage() {
     },
     {
       question: "Do you have parking at the therapy centres? How do we get there?",
-      answer: "At FlowMotion Hydrotherapy Centre, yes there is easy free parking — you can drive your car right up to the door with the acupuncture room a few steps from the doorway. So this location is ideal for large, less mobile dogs or for cats and rabbits who want a quiet space and car transport."
+      answer: "At FlowMotion Hydrotherapy Centre, yes there is easy free parking - you can drive your car right up to the door with the acupuncture room a few steps from the doorway. So this location is ideal for large, less mobile dogs or for cats and rabbits who want a quiet space and car transport.\n\nFido's of Fitzrovia is in the heart of London - there is no allocated free parking but there are numerous transport links and taxis can drop off right outside the door. There's also a lovely doggy shop and other wellness services on site."
     },
     {
       question: "Can I speak to you first for advice?",
@@ -656,10 +656,10 @@ export function HomePage() {
               <div className="mb-6 pb-6 border-b border-primary/20">
                 <h3 className="text-2xl font-serif text-foreground mb-2">Initial Home Visit</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Comprehensive consultation in the comfort of your home—Contact Us for Availability
+                  Comprehensive consultation and treatment in the comfort and familiarity of your home. Contact us for availability
                 </p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-serif text-accent">£162</span>
+                  <span className="text-5xl font-serif text-accent">£192</span>
                 </div>
               </div>
 
@@ -667,23 +667,31 @@ export function HomePage() {
               <div className="space-y-4 mb-8 flex-grow">
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Full health assessment and acupuncture treatment</p>
+                  <p className="text-foreground text-sm">Full review of your pet's clinical history and co-ordination with your vet</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Review of your pet's full clinical history (we liaise with your vet to obtain notes)</p>
+                  <p className="text-foreground text-sm">1 hour home visit from a RCVS veterinary surgeon (ABVA)</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Personalised treatment plan tailored to your pet</p>
+                  <p className="text-foreground text-sm">Physical examination including musculoskeletal and neurological assessment</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Expert advice on aftercare and ongoing wellness</p>
+                  <p className="text-foreground text-sm">Mobility and gait analysis</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground text-sm">Stress-free experience in your pet's familiar environment</p>
+                  <p className="text-foreground text-sm">Professional acupuncture treatment</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-foreground text-sm">Expert advice on exercise, home environment and adjustments to help your pet family</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-foreground text-sm">Advice on local physiotherapist options</p>
                 </div>
               </div>
 
