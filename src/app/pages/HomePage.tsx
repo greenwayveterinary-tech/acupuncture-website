@@ -627,6 +627,7 @@ export function HomePage() {
                 <Calendar className="w-5 h-5" />
                 Book your clinic appointment now
               </a>
+              <p className="text-muted-foreground text-xs mt-3 text-center">*Appointments cancelled with less than 24 hours' notice incur a 30% fee.</p>
             </motion.div>
           </div>
         </div>
