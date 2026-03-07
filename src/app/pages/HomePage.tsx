@@ -131,7 +131,7 @@ export function HomePage() {
       },
       {
         '@type': 'Place',
-        name: 'Community Centre at Studley Green',
+        name: 'Kite's Nest',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Wycombe Road, Studley Green',
@@ -854,7 +854,7 @@ export function HomePage() {
                 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Flowmotion+Unit+7+Bow+Triangle+Business+Centre+Eleanor+Street+London+E3+4UR",
               },
               {
-                name: "Community Centre at Studley Green",
+                name: "Kite's Nest",
                 description: "Located within the Community Centre at Studley Green, just off the M40 between High Wycombe and Oxford.  A quiet, peaceful space with plenty of free parking - ideal for all dogs, cats and rabbits, with the bonus of a dog-friendly garden centre and cafe opposite",
                 address: "Wycombe Road, Studley Green, High Wycombe, HP14 3UY",
                 mapQuery: "Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY",

@@ -131,7 +131,7 @@ export function ContactPage() {
                           <p className="text-muted-foreground text-sm">London, W1W 7LU</p>
                         </a>
                         <a href="https://www.google.com/maps/search/?api=1&query=Community+Centre+Studley+Green+Wycombe+Road+High+Wycombe+HP14+3UY" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">
-                          <p className="text-foreground font-medium">Community Centre at Studley Green</p>
+                          <p className="text-foreground font-medium">Kite's Nest</p>
                           <p className="text-muted-foreground text-sm">Wycombe Road, Studley Green</p>
                           <p className="text-muted-foreground text-sm">High Wycombe, HP14 3UY</p>
                         </a>
