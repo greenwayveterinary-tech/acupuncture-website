@@ -651,11 +651,11 @@ export function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Initial Home Visit */}
-            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col">
+            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-3">
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-primary/20">
                 <h3 className="text-2xl font-serif text-foreground mb-2">Initial Home Visit</h3>
-                <p className="text-sm text-muted-foreground mb-4 min-h-[3rem]">
+                <p className="text-sm text-muted-foreground mb-4">
                   Comprehensive consultation and treatment in the comfort and familiarity of your home. Contact us for availability
                 </p>
                 <div className="flex items-baseline gap-1">
@@ -698,18 +698,18 @@ export function HomePage() {
               {/* CTA */}
               <Link
                 to="/contact"
-                className="w-full text-center border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 py-3 rounded-lg transition-all font-medium"
+                className="w-full text-center border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 py-3 rounded-lg transition-all font-medium self-end"
               >
                 Contact Us Today
               </Link>
             </div>
 
             {/* Repeat Home-Visit */}
-            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col">
+            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-3">
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-primary/20">
                 <h3 className="text-2xl font-serif text-foreground mb-2">Repeat Home-Visit</h3>
-                <p className="text-sm text-muted-foreground mb-4 min-h-[3rem]">
+                <p className="text-sm text-muted-foreground mb-4">
                   Convenient follow-up sessions at home. Limited slots available
                 </p>
                 <div className="flex items-baseline gap-1">
@@ -740,14 +740,14 @@ export function HomePage() {
               {/* CTA */}
               <Link
                 to="/contact"
-                className="w-full text-center border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 py-3 rounded-lg transition-all font-medium"
+                className="w-full text-center border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 py-3 rounded-lg transition-all font-medium self-end"
               >
                 Contact Us Today
               </Link>
             </div>
 
             {/* In-Clinic Treatment */}
-            <div className="bg-accent/5 rounded-2xl p-8 border-2 border-accent hover:border-accent/80 transition-all hover:shadow-xl flex flex-col relative overflow-hidden">
+            <div className="bg-accent/5 rounded-2xl p-8 border-2 border-accent hover:border-accent/80 transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-3 relative overflow-hidden">
               {/* Popular badge */}
               <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold">
                 POPULAR
@@ -756,7 +756,7 @@ export function HomePage() {
               {/* Header */}
               <div className="mb-6 pb-6 border-b border-accent/20">
                 <h3 className="text-2xl font-serif text-foreground mb-2">In-Clinic Treatment</h3>
-                <p className="text-sm text-muted-foreground mb-4 min-h-[3rem]">
+                <p className="text-sm text-muted-foreground mb-4">
                   Calm, comfortable acupuncture sessions in our clinics
                 </p>
                 <div className="flex items-baseline gap-1">
@@ -797,7 +797,7 @@ export function HomePage() {
                 href="https://app.conciergevet.co.uk/book/gva-0f4570"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg transition-all font-medium shadow-md"
+                className="w-full text-center bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg transition-all font-medium shadow-md self-end"
               >
                 Book Now
               </a>
