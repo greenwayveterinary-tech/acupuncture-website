@@ -92,6 +92,10 @@ export function HomePage() {
     {
       question: "Can I be added to a waiting list for a home visit?",
       answer: "Yes! If home visits are currently unavailable in your area, we can add you to our waiting list and contact you as soon as a slot opens up. In the meantime, we encourage booking a fixed-base appointment to avoid delays in your pet's treatment."
+    },
+    {
+      question: "Do you treat rabbits?",
+      answer: "Yes, we do, particularly for the pain associated with osteoarthritis. Since rabbits are particularly sensitive to stress and need special attention, please contact us to discuss the best option for them regarding appointment arrangements"
     }
   ];
 
