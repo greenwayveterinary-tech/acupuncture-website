@@ -651,13 +651,16 @@ export function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Initial Home Visit */}
-            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-3">
-              {/* Header */}
-              <div className="mb-6 pb-6 border-b border-primary/20">
+            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-4">
+              {/* Title & Description */}
+              <div>
                 <h3 className="text-2xl font-serif text-foreground mb-2">Initial Home Visit</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground">
                   Comprehensive consultation and treatment in the comfort and familiarity of your home. Contact us for availability
                 </p>
+              </div>
+              {/* Price */}
+              <div className="mb-6 pb-6 border-b border-primary/20">
                 <div className="flex items-baseline gap-1">
                   <span className="text-5xl font-serif text-accent">£192</span>
                 </div>
@@ -705,13 +708,16 @@ export function HomePage() {
             </div>
 
             {/* Repeat Home-Visit */}
-            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-3">
-              {/* Header */}
-              <div className="mb-6 pb-6 border-b border-primary/20">
+            <div className="bg-secondary rounded-2xl p-8 border-2 border-primary/20 hover:border-accent transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-4">
+              {/* Title & Description */}
+              <div>
                 <h3 className="text-2xl font-serif text-foreground mb-2">Repeat Home-Visit</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground">
                   Convenient follow-up sessions at home. Limited slots available
                 </p>
+              </div>
+              {/* Price */}
+              <div className="mb-6 pb-6 border-b border-primary/20">
                 <div className="flex items-baseline gap-1">
                   <span className="text-5xl font-serif text-accent">£168</span>
                 </div>
@@ -747,18 +753,21 @@ export function HomePage() {
             </div>
 
             {/* In-Clinic Treatment */}
-            <div className="bg-accent/5 rounded-2xl p-8 border-2 border-accent hover:border-accent/80 transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-3 relative overflow-hidden">
+            <div className="bg-accent/5 rounded-2xl p-8 border-2 border-accent hover:border-accent/80 transition-all hover:shadow-xl flex flex-col md:grid md:grid-rows-subgrid md:row-span-4 relative overflow-hidden">
               {/* Popular badge */}
               <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold">
                 POPULAR
               </div>
 
-              {/* Header */}
-              <div className="mb-6 pb-6 border-b border-accent/20">
+              {/* Title & Description */}
+              <div>
                 <h3 className="text-2xl font-serif text-foreground mb-2">In-Clinic Treatment</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground">
                   Calm, comfortable acupuncture sessions in our clinics
                 </p>
+              </div>
+              {/* Price */}
+              <div className="mb-6 pb-6 border-b border-accent/20">
                 <div className="flex items-baseline gap-1">
                   <span className="text-5xl font-serif text-accent">£162 / £120</span>
                 </div>
