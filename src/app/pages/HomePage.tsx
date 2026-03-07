@@ -929,7 +929,7 @@ export function HomePage() {
                           >
                             <img
                               src="https://img.youtube.com/vi/ySLi14_Plw4/maxresdefault.jpg"
-                              alt="Video thumbnail"
+                              alt="Veterinary acupuncture session with a relaxed dog"
                               className="w-full h-full object-cover rounded-lg"
                             />
                             <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors rounded-lg">

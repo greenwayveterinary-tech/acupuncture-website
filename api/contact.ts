@@ -3,16 +3,32 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, phone, petName, petType, appointmentType, message } = req.body;
+  const { name: rawName, email: rawEmail, phone: rawPhone, petName: rawPetName, petType: rawPetType, appointmentType, message: rawMessage } = req.body;
 
-  if (!name || !email || !message) {
+  if (!rawName || !rawEmail || !rawMessage) {
     return res.status(400).json({ error: 'Name, email, and message are required' });
   }
+
+  const name = escapeHtml(rawName);
+  const email = escapeHtml(rawEmail);
+  const phone = rawPhone ? escapeHtml(rawPhone) : '';
+  const petName = rawPetName ? escapeHtml(rawPetName) : '';
+  const petType = rawPetType ? escapeHtml(rawPetType) : '';
+  const message = escapeHtml(rawMessage);
 
   const appointmentLabels: Record<string, string> = {
     home: 'Home Visit',
@@ -63,7 +79,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Failed to send email:', error);
     return res.status(500).json({ error: 'Failed to send message' });
   }
 }

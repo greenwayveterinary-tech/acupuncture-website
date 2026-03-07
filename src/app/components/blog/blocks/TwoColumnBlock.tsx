@@ -6,11 +6,11 @@ import { ListBlock } from './ListBlock';
 function renderSimpleBlock(block: ContentBlock, index: number) {
   switch (block.type) {
     case 'paragraph':
-      return <ParagraphBlock key={index} {...block} />;
+      return <ParagraphBlock key={`${block.type}-${index}`} {...block} />;
     case 'heading':
-      return <HeadingBlock key={index} {...block} />;
+      return <HeadingBlock key={block.id} {...block} />;
     case 'list':
-      return <ListBlock key={index} {...block} />;
+      return <ListBlock key={`list-${index}`} {...block} />;
     default:
       return null;
   }

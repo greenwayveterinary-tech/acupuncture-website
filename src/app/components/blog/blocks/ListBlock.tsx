@@ -11,7 +11,7 @@ export function ListBlock({ style, items }: ListBlockType) {
     <Tag className={`${listClass} text-foreground/90 leading-relaxed text-[17px] my-4`}>
       {items.map((item, i) => (
         <li
-          key={i}
+          key={`item-${i}`}
           className={style === 'unordered' ? 'relative pl-2 before:content-[""] before:absolute before:-left-4 before:top-[10px] before:w-2 before:h-2 before:rounded-full before:bg-accent/60' : ''}
         >
           <span dangerouslySetInnerHTML={{ __html: item }} />

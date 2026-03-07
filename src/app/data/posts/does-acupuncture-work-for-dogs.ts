@@ -19,11 +19,7 @@ export const doesAcupunctureWorkForDogs: BlogPost = {
     'dog acupuncture UK',
     'acupuncture for dogs arthritis',
   ],
-  relatedSlugs: [
-    'first-acupuncture-session-what-to-expect',
-    'acupuncture-arthritis-dogs',
-    'veterinary-acupuncture-cost-uk',
-  ],
+  relatedSlugs: [],
   content: [
     // --- Opening ---
     {
