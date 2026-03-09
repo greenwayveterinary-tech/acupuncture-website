@@ -995,7 +995,7 @@ export function HomePage() {
               Drs Alastair and Claire Greenway are both graduates of the Royal (Dick) Veterinary College, University of Edinburgh, and members of the Royal College of Veterinary Surgeons (RCVS) and the Association of British Veterinary Acupuncturists (ABVA).
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              They are based in The Chilterns, providing acupuncture for pet families from Oxford to Essex, and have shared custody of Chester, an ex-street dog.
+              They are based in The Chilterns, providing acupuncture for pet families from Oxford to Essex.
             </p>
           </motion.div>
 
