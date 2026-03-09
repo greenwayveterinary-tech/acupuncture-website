@@ -14,19 +14,32 @@ export function ForVetsPage() {
     const container = timelineRef.current;
     if (!container) return;
 
+    const getOffsetWithin = (element: HTMLElement, ancestor: HTMLElement) => {
+      let x = 0;
+      let y = 0;
+      let node: HTMLElement | null = element;
+
+      while (node && node !== ancestor) {
+        x += node.offsetLeft;
+        y += node.offsetTop;
+        node = node.offsetParent as HTMLElement | null;
+      }
+
+      return { x, y };
+    };
+
     const updateTimelineLine = () => {
       const circles = container.querySelectorAll<HTMLElement>('[data-referral-circle]');
       if (circles.length === 0) return;
 
       const firstCircle = circles[0];
       const lastCircle = circles[circles.length - 1];
-      const containerRect = container.getBoundingClientRect();
-      const firstRect = firstCircle.getBoundingClientRect();
-      const lastRect = lastCircle.getBoundingClientRect();
+      const firstOffset = getOffsetWithin(firstCircle, container);
+      const lastOffset = getOffsetWithin(lastCircle, container);
 
-      const top = firstRect.top + firstRect.height / 2 - containerRect.top;
-      const left = firstRect.left + firstRect.width / 2 - containerRect.left;
-      const bottom = lastRect.top + lastRect.height / 2 - containerRect.top;
+      const top = firstOffset.y + firstCircle.offsetHeight / 2;
+      const left = firstOffset.x + firstCircle.offsetWidth / 2;
+      const bottom = lastOffset.y + lastCircle.offsetHeight / 2;
       const height = Math.max(0, bottom - top);
 
       setTimelineLine({ top, left, height });
