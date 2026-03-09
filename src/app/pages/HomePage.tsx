@@ -312,10 +312,10 @@ export function HomePage() {
                 Complementary, not alternative
               </h2>
               <p className="text-lg text-primary-foreground/80">
-                We believe in an integrated approach that complements and supports the treatment plan prescribed by the referring veterinary surgeon. We also co-ordinate with other professionals involved in the health and well-being of the patient, such as hydro- and physiotherapists.
+                We believe in an integrated approach that complements and supports the treatment plan made with your primary veterinary surgeon. Co-ordination with other professionals involved in your pet's health and well-being, such as veterinary physiotherapists, massage and hydrotherapists, is also welcomed and greatly valued.
               </p>
               <p className="text-lg text-primary-foreground/80">
-                This collaboration enhances the effects of each therapy, reaching for our shared goal of happy, long-lived patients and happy clients.
+                This collaboration enhances the effects of each therapy, reaching for our shared goal of happy pet-families, living long and well together.
               </p>
             </div>
 
