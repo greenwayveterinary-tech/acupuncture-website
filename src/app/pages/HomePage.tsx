@@ -99,6 +99,31 @@ export function HomePage() {
     }
   ];
 
+  const teamBios = [
+    {
+      name: 'Dr Alastair Greenway',
+      credentials: 'BVM&S MRCVS ABVA',
+      photo: '/al-gva-bw.jpg',
+      alt: 'Dr Alastair Greenway',
+      bio: [
+        'Graduating in 1995, Alastair has a wealth of medical and surgical experience in large, small and equine patients.',
+        'Recognising the significance of acupuncture over 20 years ago as an effective treatment modality, he was an early adopter of the discipline and trained on the first recognised UK course with the ABVA.',
+        'He has since treated hundreds of dogs, cats and horses throughout the South East, using acupuncture to manage a variety of painful and chronic clinical conditions.',
+      ],
+    },
+    {
+      name: 'Dr Claire Greenway',
+      credentials: 'BVM&S MRCVS ABVA',
+      photo: '/claire-GVA-bw.jpg',
+      alt: 'Dr Claire Greenway',
+      bio: [
+        'Graduating in 1997, Claire\'s early veterinary experience spanned farm, equine and the charity sector in the UK and abroad, with the majority of her medical, surgical and emergency work being in small animal practice.',
+        'Her interest in acupuncture developed from a desire to enhance the quality of daily life for pet families living with chronic pain and mobility issues in a way that is focused, effective and kind on the bodies of older patients.',
+        'She has recently gained the WSAVA Certification in Pain Management and is a Council Member of the Association of British Veterinary Acupuncturists.',
+      ],
+    },
+  ];
+
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'VeterinaryCare',
@@ -900,6 +925,74 @@ export function HomePage() {
                   </a>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Are */}
+      <section className="relative bg-card py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-serif text-foreground text-center mb-6"
+          >
+            Who We Are
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="max-w-4xl mx-auto space-y-4 text-center mb-12"
+          >
+            <p className="text-lg text-foreground/90 leading-relaxed">
+              Drs Alastair and Claire Greenway are both graduates of the Royal (Dick) Veterinary College, University of Edinburgh, and members of the Royal College of Veterinary Surgeons (RCVS) and the Association of British Veterinary Acupuncturists (ABVA).
+            </p>
+            <p className="text-lg text-foreground/80 leading-relaxed">
+              They are based in The Chilterns, providing acupuncture for pet families from Oxford to Essex, and have shared custody of Chester, an ex-street dog.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {teamBios.map((person, index) => (
+              <motion.article
+                key={person.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className="bg-secondary/60 border border-border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="grid sm:grid-cols-[140px_1fr] gap-6 items-start">
+                  <img
+                    src={person.photo}
+                    alt={person.alt}
+                    className="w-full sm:w-[140px] aspect-[4/5] object-cover rounded-xl border border-border shadow-sm"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-serif text-foreground">{person.name}</h3>
+                    <p className="text-sm text-accent font-medium mb-4">{person.credentials}</p>
+                    <div className="space-y-3">
+                      {person.bio.map((paragraph, paragraphIndex) => (
+                        <p key={paragraphIndex} className="text-sm text-foreground/80 leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.article>
             ))}
           </div>
         </div>
