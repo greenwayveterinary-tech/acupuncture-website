@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { Check, ArrowRight, FileText, Phone, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
 import { SEO } from '@/app/components/SEO';
@@ -6,6 +7,46 @@ import rcvsLogo from '@/assets/c6b0e8d6547a901cfb5d2c9fe772a37e507d2b69.png';
 import abvaLogo from '@/assets/503f0fcb693db01f094b4f8509dfb58a2480c451.png';
 
 export function ForVetsPage() {
+  const timelineRef = useRef<HTMLDivElement | null>(null);
+  const [timelineLine, setTimelineLine] = useState({ top: 28, left: 43, height: 0 });
+
+  useLayoutEffect(() => {
+    const container = timelineRef.current;
+    if (!container) return;
+
+    const updateTimelineLine = () => {
+      const circles = container.querySelectorAll<HTMLElement>('[data-referral-circle]');
+      if (circles.length === 0) return;
+
+      const firstCircle = circles[0];
+      const lastCircle = circles[circles.length - 1];
+      const containerRect = container.getBoundingClientRect();
+      const firstRect = firstCircle.getBoundingClientRect();
+      const lastRect = lastCircle.getBoundingClientRect();
+
+      const top = firstRect.top + firstRect.height / 2 - containerRect.top;
+      const left = firstRect.left + firstRect.width / 2 - containerRect.left;
+      const bottom = lastRect.top + lastRect.height / 2 - containerRect.top;
+      const height = Math.max(0, bottom - top);
+
+      setTimelineLine({ top, left, height });
+    };
+
+    updateTimelineLine();
+
+    const resizeObserver = new ResizeObserver(updateTimelineLine);
+    resizeObserver.observe(container);
+    container.querySelectorAll<HTMLElement>('[data-referral-circle]').forEach((circle) => {
+      resizeObserver.observe(circle);
+    });
+
+    window.addEventListener('resize', updateTimelineLine);
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateTimelineLine);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col">
       <SEO
@@ -64,14 +105,19 @@ export function ForVetsPage() {
           >
             The Referral Process
           </motion.h2>
-          <div className="space-y-6 relative">
+          <div ref={timelineRef} className="space-y-6 relative">
             {/* Animated connecting line */}
             <motion.div
               initial={{ height: 0 }}
-              whileInView={{ height: "calc(100% - 40px)" }}
+              whileInView={{ height: `${timelineLine.height}px` }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.2 }}
-              className="absolute left-[43px] top-[28px] z-20 w-0.5 bg-accent/30 hidden md:block pointer-events-none"
+              className="absolute z-20 w-0.5 bg-accent/30 hidden md:block pointer-events-none"
+              style={{
+                left: `${timelineLine.left}px`,
+                top: `${timelineLine.top}px`,
+                transform: 'translateX(-50%)',
+              }}
             />
 
             {[
@@ -89,7 +135,7 @@ export function ForVetsPage() {
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 className="bg-card p-6 rounded-xl border border-border flex gap-6 relative z-10 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="relative z-30 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md">
+                <div data-referral-circle className="relative z-30 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md">
                   {i + 1}
                 </div>
                 <div>
