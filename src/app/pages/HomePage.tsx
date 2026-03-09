@@ -15,6 +15,7 @@ export function HomePage() {
   const [scrollY, setScrollY] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+  const [isHeroVideoPlaying, setIsHeroVideoPlaying] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +27,14 @@ export function HomePage() {
   }, []);
 
   const parallaxOffset = Math.max(0, scrollY * 0.3);
+  const heroVideoId = 'XE9xmSimyNY';
+  const heroVideoThumbnail = `https://img.youtube.com/vi/${heroVideoId}/maxresdefault.jpg`;
+  const heroVideoSrc = `https://www.youtube.com/embed/${heroVideoId}?autoplay=1&rel=0`;
+
+  const getYouTubeThumbnail = (embedUrl: string) => {
+    const videoId = embedUrl.split('/embed/')[1]?.split('?')[0];
+    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : '';
+  };
 
   const conditions = [
     'Arthritis & joint pain',
@@ -205,6 +214,9 @@ export function HomePage() {
             src={heroImage} 
             alt="Dog and cat together" 
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           {/* Black gradient overlay - darkest on left */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
@@ -262,16 +274,36 @@ export function HomePage() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="absolute bottom-8 right-8 w-80 aspect-video rounded-xl overflow-hidden shadow-2xl"
           >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/XE9xmSimyNY"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+            {isHeroVideoPlaying ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={heroVideoSrc}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            ) : (
+              <button
+                onClick={() => setIsHeroVideoPlaying(true)}
+                className="relative w-full h-full group cursor-pointer"
+                aria-label="Play introduction video"
+              >
+                <img
+                  src={heroVideoThumbnail}
+                  alt="Preview of veterinary acupuncture video"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                    <div className="w-0 h-0 border-l-[16px] border-l-white border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+              </button>
+            )}
           </motion.div>
         </div>
       </section>
@@ -1013,7 +1045,13 @@ export function HomePage() {
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-accent/30">
                 <button
-                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  onClick={() => {
+                    const nextOpen = openFaqIndex === index ? null : index;
+                    setOpenFaqIndex(nextOpen);
+                    if (playingVideo !== null && playingVideo !== nextOpen) {
+                      setPlayingVideo(null);
+                    }
+                  }}
                   className="w-full py-5 px-6 flex items-center justify-between text-left hover:bg-accent/5 transition-colors rounded-t-lg"
                 >
                   <span className="text-lg text-primary-foreground font-medium pr-4">
@@ -1035,17 +1073,18 @@ export function HomePage() {
                       <p className="text-primary-foreground/80 leading-relaxed whitespace-pre-line">
                         {faq.answer}
                       </p>
-                      {faq.video && (
+                      {faq.video && openFaqIndex === index && (
                         <div className="mt-6 w-full aspect-video">
-                          {index === 0 && playingVideo !== index ? (
+                          {playingVideo !== index ? (
                             <button
                               onClick={() => setPlayingVideo(index)}
                               className="relative w-full h-full group cursor-pointer"
                             >
                               <img
-                                src="https://img.youtube.com/vi/ySLi14_Plw4/maxresdefault.jpg"
+                                src={getYouTubeThumbnail(faq.video)}
                                 alt="Veterinary acupuncture session with a relaxed dog"
                                 className="w-full h-full object-cover rounded-lg"
+                                loading="lazy"
                               />
                               <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors rounded-lg">
                                 <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -1057,7 +1096,7 @@ export function HomePage() {
                             <iframe
                               width="100%"
                               height="100%"
-                              src={faq.video}
+                              src={`${faq.video}${faq.video.includes('?') ? '&' : '?'}autoplay=1&rel=0`}
                               title="YouTube video player"
                               frameBorder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
