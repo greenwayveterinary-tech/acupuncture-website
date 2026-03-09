@@ -138,21 +138,12 @@ export function AcupuncturePage() {
             What to Expect
           </motion.h2>
           <div className="space-y-8 relative">
-            {/* Animated connecting line */}
-            <motion.div
-              initial={{ height: 0 }}
-              whileInView={{ height: "calc(100% - 40px)" }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: 0.2 }}
-              className="absolute left-[19px] top-[20px] w-0.5 bg-accent/30"
-            />
-
             {[
               { title: 'Initial Consultation', desc: 'Allow a good hour for the first session. We\'ll get to know your pet, watch how they move and behave, discuss their history and lifestyle, review their clinical records from your regular vet and then carefully examine them before explaining our treatment plan to you.' },
               { title: 'The Treatment', desc: 'Fine needles are gently placed at specific acupoints. We often start with fewer points on the first session, particularly if the patient is sensitised by recent pain issues, and build up in subsequent treatments. The needles remain in place for approximately 15–20 minutes. We listen to and observe your pet throughout, to maximise a comfortable, relaxing experience for them.' },
               { title: 'Aftercare', desc: 'After the session, your pet needs to relax for an hour or so. We\'ll discuss a plan with you and provide advice on additional therapeutic options. Patients respond and adjust individually to their first acupuncture sessions so we are available to talk to directly following those early sessions, with any queries or concerns.' },
               { title: 'Follow-Up', desc: 'Pets who respond well tend to show improvement within 2-3 treatments, and you\'ll have the option of continuing with monthly sessions or as needed.' },
-            ].map((step, i) => (
+            ].map((step, i, steps) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -30 }}
@@ -161,12 +152,17 @@ export function AcupuncturePage() {
                 transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
                 className="flex gap-6 relative z-10"
               >
-                <motion.div
-                  whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
-                  className="bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md"
-                >
-                  {i + 1}
-                </motion.div>
+                <div className="relative w-10 flex-shrink-0">
+                  {i < steps.length - 1 && (
+                    <div className="absolute left-1/2 top-5 -translate-x-1/2 w-0.5 h-[calc(100%+2rem)] bg-accent/30" />
+                  )}
+                  <motion.div
+                    whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
+                    className="relative z-10 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-md"
+                  >
+                    {i + 1}
+                  </motion.div>
+                </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground mb-2">{step.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{step.desc}</p>

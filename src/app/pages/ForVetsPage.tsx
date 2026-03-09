@@ -33,10 +33,20 @@ export function ForVetsPage() {
           </h2>
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Greenway Veterinary Acupuncture operates as a complementary service that supports — never replaces — the treatment plan you have in place for your patient. We believe the best outcomes for patients come from a collaborative, multi-disciplinary approach.
+              <strong>
+                Greenway Veterinary Acupuncture provides a service that complements and supports the treatment plan you have put place for your patient. We also co-ordinate with other professionals involved in the health and well-being of the patient, such as hydro- and physiotherapists.
+              </strong>
             </p>
             <p>
-              When a client contacts us, we will always seek a referral and obtain clinical history from the primary care veterinary practice. After each session, we provide a full treatment report so you remain informed and involved in your patient's care.
+              <strong>
+                This collaborative, integrated approach enhances the effects of each therapy, reaching for our shared goal of happy, long-lived patients and happy clients.
+              </strong>
+            </p>
+            <p>
+              When a client contacts us, we seek a referral and clinical history from you, the primary care vet. Alastair and Claire are both veterinary surgeons experienced in all aspects of general medicine and surgery so if we suspect any clinical issues other than the primary reason for the referral, we direct your client back to your clinic for further investigations, treatment and advice.
+            </p>
+            <p>
+              At all times, the welfare and quality of life of both pet and care-giver are our primary focus.
             </p>
           </div>
         </div>
@@ -68,7 +78,7 @@ export function ForVetsPage() {
               { title: 'Client Enquiry', desc: 'The client contacts us directly, or you refer them to us. We can also discuss potential cases with you beforehand to assess suitability.' },
               { title: 'Referral & Clinical Notes', desc: 'We request a referral and full clinical history from your practice. This includes diagnostics, current medications, and any relevant imaging or blood results.' },
               { title: 'Assessment & Treatment', desc: 'We carry out a thorough examination and acupuncture session, developing a treatment plan tailored to the patient\'s condition and needs.' },
-              { title: 'Reporting Back', desc: 'After each session, we send a detailed treatment report to you. We\'re always happy to discuss progress, adjustments, or concerns by phone or email.' },
+              { title: 'After-Care', desc: 'We remain available to the client by phone or messaging to discuss any queries or concerns related to the acupuncture session. For everything else, you remain their first port of call.' },
             ].map((step, i) => (
               <motion.div
                 key={i}
@@ -122,10 +132,10 @@ export function ForVetsPage() {
       <section className="bg-primary py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-serif text-primary-foreground mb-8">
-            Our Credentials
+            Integrated - Supportive - Collaborative
           </h2>
           <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            All treatments are carried out by RCVS-registered veterinary surgeons who are members of the Association of British Veterinary Acupuncturists (ABVA), with years of experience in veterinary acupuncture.
+            All treatments are carried out by RCVS-registered veterinary surgeons who are members of the Association of British Veterinary Acupuncturists (ABVA), with years of experience in both veterinary acupuncture and general practice.
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12">
             <a href="https://www.rcvs.org.uk" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
