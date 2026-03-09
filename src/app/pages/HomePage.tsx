@@ -849,14 +849,18 @@ export function HomePage() {
       </section>
 
       {/* Our Locations */}
-      <section className="bg-secondary py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative bg-primary py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-20 left-16 h-56 w-56 rounded-full bg-accent/12 blur-3xl" />
+          <div className="absolute -bottom-24 right-12 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-serif text-foreground text-center mb-4"
+            className="text-4xl font-serif text-primary-foreground text-center mb-4"
           >
             Our Locations
           </motion.h2>
@@ -865,7 +869,7 @@ export function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-center text-foreground/70 text-lg mb-12"
+            className="text-center text-primary-foreground/80 text-lg mb-12"
           >
             Visit us at one of our partner locations across London and The Chilterns
           </motion.p>
