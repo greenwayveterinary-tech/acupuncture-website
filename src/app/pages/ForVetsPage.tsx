@@ -71,7 +71,7 @@ export function ForVetsPage() {
               whileInView={{ height: "calc(100% - 40px)" }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.2 }}
-              className="absolute left-[43px] top-[28px] w-0.5 bg-accent/30 hidden md:block"
+              className="absolute left-[43px] top-[28px] z-20 w-0.5 bg-accent/30 hidden md:block pointer-events-none"
             />
 
             {[
@@ -89,7 +89,7 @@ export function ForVetsPage() {
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 className="bg-card p-6 rounded-xl border border-border flex gap-6 relative z-10 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md">
+                <div className="relative z-30 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md">
                   {i + 1}
                 </div>
                 <div>
