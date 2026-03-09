@@ -146,7 +146,7 @@ export function ForVetsPage() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                className="bg-card p-6 rounded-xl border border-border flex gap-6 relative z-10 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-card p-6 rounded-xl border border-border flex gap-6 relative shadow-sm hover:shadow-md transition-shadow"
               >
                 <div data-referral-circle className="relative z-30 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold shadow-md">
                   {i + 1}
