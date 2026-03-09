@@ -1016,52 +1016,54 @@ export function HomePage() {
                     {faq.question}
                   </span>
                   <ChevronDown 
-                    className={`text-accent flex-shrink-0 transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`}
+                    className={`text-accent flex-shrink-0 transition-transform duration-500 ${openFaqIndex === index ? 'rotate-180' : ''}`}
                     size={24}
                   />
                 </button>
                 
                 <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openFaqIndex === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                  className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    openFaqIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
-                  <div className="px-6 pb-5">
-                    <p className="text-primary-foreground/80 leading-relaxed whitespace-pre-line">
-                      {faq.answer}
-                    </p>
-                    {faq.video && (
-                      <div className="mt-6 w-full aspect-video">
-                        {index === 0 && playingVideo !== index ? (
-                          <button
-                            onClick={() => setPlayingVideo(index)}
-                            className="relative w-full h-full group cursor-pointer"
-                          >
-                            <img
-                              src="https://img.youtube.com/vi/ySLi14_Plw4/maxresdefault.jpg"
-                              alt="Veterinary acupuncture session with a relaxed dog"
-                              className="w-full h-full object-cover rounded-lg"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors rounded-lg">
-                              <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-5">
+                      <p className="text-primary-foreground/80 leading-relaxed whitespace-pre-line">
+                        {faq.answer}
+                      </p>
+                      {faq.video && (
+                        <div className="mt-6 w-full aspect-video">
+                          {index === 0 && playingVideo !== index ? (
+                            <button
+                              onClick={() => setPlayingVideo(index)}
+                              className="relative w-full h-full group cursor-pointer"
+                            >
+                              <img
+                                src="https://img.youtube.com/vi/ySLi14_Plw4/maxresdefault.jpg"
+                                alt="Veterinary acupuncture session with a relaxed dog"
+                                className="w-full h-full object-cover rounded-lg"
+                              />
+                              <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors rounded-lg">
+                                <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                  <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+                                </div>
                               </div>
-                            </div>
-                          </button>
-                        ) : (
-                          <iframe
-                            width="100%"
-                            height="100%"
-                            src={faq.video}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                            className="w-full h-full rounded-lg"
-                          ></iframe>
-                        )}
-                      </div>
-                    )}
+                            </button>
+                          ) : (
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src={faq.video}
+                              title="YouTube video player"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen
+                              className="w-full h-full rounded-lg"
+                            ></iframe>
+                          )}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
