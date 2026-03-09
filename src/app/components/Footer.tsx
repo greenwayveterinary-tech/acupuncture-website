@@ -148,12 +148,6 @@ export function Footer() {
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Greenway Veterinary Acupuncture. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-xs">
-            Greenway Veterinary Acupuncture is separate from{' '}
-            <a href="https://conciergevet.co.uk" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
-              ConciergeVet
-            </a>
-          </p>
         </div>
       </div>
     </footer>

@@ -150,7 +150,8 @@ export function AcupuncturePage() {
             {[
               { title: 'Initial Consultation', desc: 'Allow a good hour for the first session. We\'ll get to know your pet, watch how they move and behave, discuss their history and lifestyle, review their clinical records from your regular vet and then carefully examine them before explaining our treatment plan to you.' },
               { title: 'The Treatment', desc: 'Fine needles are gently placed at specific acupoints. We often start with fewer points on the first session, particularly if the patient is sensitised by recent pain issues, and build up in subsequent treatments. The needles remain in place for approximately 15–20 minutes. We listen to and observe your pet throughout, to maximise a comfortable, relaxing experience for them.' },
-              { title: 'Aftercare & Follow-Up', desc: 'After the session, your pet needs to relax for an hour or so. We\'ll discuss a plan with you and provide advice on additional therapeutic options. Patients respond and adjust individually to their first acupuncture sessions so we are available to talk to directly following those early sessions, with any queries or concerns.' },
+              { title: 'Aftercare', desc: 'After the session, your pet needs to relax for an hour or so. We\'ll discuss a plan with you and provide advice on additional therapeutic options. Patients respond and adjust individually to their first acupuncture sessions so we are available to talk to directly following those early sessions, with any queries or concerns.' },
+              { title: 'Follow-Up', desc: 'Pets who respond well tend to show improvement within 2-3 treatments, and you\'ll have the option of continuing with monthly sessions or as needed.' },
             ].map((step, i) => (
               <motion.div
                 key={i}
