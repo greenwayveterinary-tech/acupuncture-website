@@ -124,7 +124,7 @@ export function ForVetsPage() {
               initial={{ height: 0 }}
               whileInView={{ height: `${timelineLine.height}px` }}
               viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: 0.2 }}
+              transition={{ duration: Math.max(1, timelineLine.height / 175), delay: 0.3 }}
               className="absolute z-20 w-0.5 bg-accent/30 hidden md:block pointer-events-none"
               style={{
                 left: `${timelineLine.left}px`,
