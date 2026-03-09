@@ -36,7 +36,7 @@ export function AcupuncturePage() {
   return (
     <div className="flex flex-col">
       <SEO
-        title="Veterinary Acupuncture for Dogs & Cats"
+        title="Veterinary Acupuncture for Dogs, Cats & Rabbits"
         description="Learn how veterinary acupuncture works, what conditions it treats, and what to expect during a session. Arthritis, pain relief, mobility support, and post-operative recovery."
         path="/acupuncture"
       />
@@ -46,13 +46,13 @@ export function AcupuncturePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-5xl font-serif text-primary-foreground leading-tight">
-                Veterinary Acupuncture for Dogs & Cats
+                Veterinary Acupuncture for Dogs, Cats & Rabbits
               </h1>
               <p className="text-lg text-primary-foreground/80 leading-relaxed">
-                Acupuncture is a time-tested therapy that involves the insertion of very fine needles into specific points on the body. In veterinary medicine, it is used to treat pain, promote healing, and improve function — all without the side effects often associated with long-term medication use.
+                Acupuncture is a clinically proven therapy that involves the insertion of very fine needles into specific points on the body. In veterinary medicine, it is used to treat pain, promote healing and improve function - all without the side effects often associated with long-term medication use.
               </p>
               <p className="text-lg text-primary-foreground/80 leading-relaxed">
-                At Greenway Veterinary Acupuncture, we use acupuncture as part of an integrated approach to your pet's health, working alongside your regular vet and other therapists to achieve the best possible outcomes.
+                At Greenway Veterinary Acupuncture, we use acupuncture as part of an integrated approach to your pet's health, working alongside your regular vet and other professionals to achieve the best possible outcomes for you both.
               </p>
               <Link
                 to="/contact"
@@ -81,10 +81,10 @@ export function AcupuncturePage() {
           </h2>
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Acupuncture works by stimulating specific points on the body — known as acupoints — using very fine, sterile needles. These points correspond to areas rich in nerve endings, blood vessels, and immune cells.
+              Acupuncture works by stimulating specific points on the body, known as acupoints. These points often correspond to areas rich in nerve bundles, neurovascular junctions and significant areas of muscle and fascia.
             </p>
             <p>
-              When needles are placed at these points, they trigger a cascade of physiological responses including:
+              When needles are placed at these points, the <strong>musculoskeletal, hormonal, cardiovascular and nervous systems are all affected</strong> and there is a cascade of physiological responses including:
             </p>
             <div className="grid md:grid-cols-2 gap-4 my-8">
               {[
@@ -148,9 +148,9 @@ export function AcupuncturePage() {
             />
 
             {[
-              { title: 'Initial Consultation', desc: 'Allow a good hour for the first session. We\'ll examine your pet, watch them move, discuss their history and lifestyle, and review their clinical records (which we obtain from your regular vet). We then begin the first acupuncture treatment.' },
-              { title: 'The Treatment', desc: 'Fine needles are gently placed at specific acupoints. We start with fewer points on the first session and build up in subsequent treatments. The needles remain in place for approximately 15–20 minutes. 95% of the time your pet won\'t feel anything at all.' },
-              { title: 'Aftercare & Follow-Up', desc: 'After the session, allow your pet an hour or so of relaxation. We\'ll discuss what we found, our treatment plan going forward, and any complementary advice. Most pets show improvement within 1–3 sessions.' },
+              { title: 'Initial Consultation', desc: 'Allow a good hour for the first session. We\'ll get to know your pet, watch how they move and behave, discuss their history and lifestyle, review their clinical records from your regular vet and then carefully examine them before explaining our treatment plan to you.' },
+              { title: 'The Treatment', desc: 'Fine needles are gently placed at specific acupoints. We often start with fewer points on the first session, particularly if the patient is sensitised by recent pain issues, and build up in subsequent treatments. The needles remain in place for approximately 15–20 minutes. We listen to and observe your pet throughout, to maximise a comfortable, relaxing experience for them.' },
+              { title: 'Aftercare & Follow-Up', desc: 'After the session, your pet needs to relax for an hour or so. We\'ll discuss a plan with you and provide advice on additional therapeutic options. Patients respond and adjust individually to their first acupuncture sessions so we are available to talk to directly following those early sessions, with any queries or concerns.' },
             ].map((step, i) => (
               <motion.div
                 key={i}
