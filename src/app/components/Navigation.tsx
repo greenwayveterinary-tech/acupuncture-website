@@ -254,6 +254,7 @@ export function Navigation() {
     { to: 'how-it-works', label: 'How it Works', type: 'scroll' },
     { to: 'pricing', label: 'Pricing', type: 'scroll' },
     { to: 'faqs', label: 'FAQs', type: 'scroll' },
+    { to: '/tools', label: 'Pet Tools', type: 'route' },
     { to: '/for-vets', label: 'For Vets', type: 'route' },
     { to: '/contact', label: 'Contact', type: 'route' },
   ];

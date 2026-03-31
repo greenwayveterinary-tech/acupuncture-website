@@ -44,6 +44,11 @@ const BlogPostPage = lazy(async () => {
   return { default: module.BlogPostPage };
 });
 
+const ToolsPage = lazy(async () => {
+  const module = await import('@/app/pages/ToolsPage');
+  return { default: module.ToolsPage };
+});
+
 function PageLoader({ children }: { children: ReactNode }) {
   return (
     <Suspense fallback={<div className="min-h-[40vh] bg-card" />}>
@@ -77,6 +82,7 @@ const router = createBrowserRouter([
       { path: '/blog', element: <PageLoader><BlogListPage /></PageLoader> },
       { path: '/blog/:slug', element: <PageLoader><BlogPostPage /></PageLoader> },
       { path: '/contact', element: <PageLoader><ContactPage /></PageLoader> },
+      { path: '/tools', element: <PageLoader><ToolsPage /></PageLoader> },
       { path: '/privacy', element: <PageLoader><PrivacyPage /></PageLoader> },
       { path: '/terms', element: <PageLoader><TermsPage /></PageLoader> },
       { path: '*', element: <PageLoader><NotFoundPage /></PageLoader> },
