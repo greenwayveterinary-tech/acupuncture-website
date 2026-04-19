@@ -24,6 +24,9 @@ export interface BlogPost {
   updatedAt?: string;
   readingTime: number;
   heroImage?: string;
+  heroImageAlt?: string;
+  /** Dedicated 1.91:1 landscape image for social share cards. Defaults to heroImage. */
+  ogImage?: string;
   content: ContentBlock[];
   relatedSlugs: string[];
   tags: string[];

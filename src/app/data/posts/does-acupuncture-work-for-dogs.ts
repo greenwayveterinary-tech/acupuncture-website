@@ -1,5 +1,4 @@
 import type { BlogPost } from '@/app/types/blog';
-import heroImg from '@/assets/4f7fa0999a01cc24cf63ce2a5e72fbc69929e953.jpg';
 
 export const doesAcupunctureWorkForDogs: BlogPost = {
   slug: 'does-acupuncture-work-for-dogs',
@@ -11,7 +10,9 @@ export const doesAcupunctureWorkForDogs: BlogPost = {
   authorSlug: 'alastair-greenway',
   publishedAt: '2026-03-01',
   readingTime: 9,
-  heroImage: heroImg,
+  heroImage: '/blog/does-acupuncture-work-for-dogs.jpg',
+  ogImage: '/blog/og-does-acupuncture-work-for-dogs.jpg',
+  heroImageAlt: 'A dog and cat together, representing pets that benefit from veterinary acupuncture for chronic pain and mobility.',
   tags: [
     'acupuncture for dogs',
     'does dog acupuncture work',
@@ -19,7 +20,7 @@ export const doesAcupunctureWorkForDogs: BlogPost = {
     'dog acupuncture UK',
     'acupuncture for dogs arthritis',
   ],
-  relatedSlugs: [],
+  relatedSlugs: ['what-to-expect-first-acupuncture-session'],
   content: [
     // --- Opening ---
     {

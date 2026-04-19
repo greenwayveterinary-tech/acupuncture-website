@@ -23,6 +23,11 @@ export function BlogPostPage() {
   const relatedPosts = getRelatedPosts(post);
   const tocEntries = generateTableOfContents(post.content);
 
+  const ogImagePath = post.ogImage || post.heroImage;
+  const ogImage = ogImagePath
+    ? `https://acupuncture-vet.co.uk${ogImagePath}`
+    : undefined;
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -30,7 +35,7 @@ export function BlogPostPage() {
     description: post.description,
     datePublished: post.publishedAt,
     ...(post.updatedAt && { dateModified: post.updatedAt }),
-    image: post.heroImage || 'https://acupuncture-vet.co.uk/og-default.jpg',
+    image: ogImage || 'https://acupuncture-vet.co.uk/og-default.jpg',
     author: {
       '@type': 'Person',
       name: author?.name,
@@ -86,6 +91,7 @@ export function BlogPostPage() {
         description={post.description}
         path={`/blog/${post.slug}`}
         ogType="article"
+        ogImage={ogImage}
         publishedAt={post.publishedAt}
         updatedAt={post.updatedAt}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}
@@ -140,8 +146,11 @@ export function BlogPostPage() {
           >
             <img
               src={post.heroImage}
-              alt={post.title}
-              className="w-full h-auto max-h-[400px] object-cover"
+              alt={post.heroImageAlt || post.title}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto max-h-[400px] object-cover object-[50%_25%]"
             />
           </motion.div>
         </div>

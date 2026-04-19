@@ -384,6 +384,7 @@ export function ToolsPage() {
       <SEO
         title="Pet Acupuncture Tools | Is My Pet a Candidate? | Pain Assessment"
         description="Use our free tools to find out if your pet is a good candidate for veterinary acupuncture, and assess their current pain level with our interactive pain scoring guide."
+        path="/tools"
       />
       <div className="bg-secondary min-h-screen py-16 px-4">
         <div className="max-w-xl mx-auto">
